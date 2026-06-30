@@ -2280,6 +2280,10 @@ scale = Vector2(4, 4)
 position = Vector2(2416, -288)
 scale = Vector2(4, 4)
 
+[node name="Checkpoint5" parent="Checkpoints" unique_id=276435031 instance=ExtResource("20_1kice")]
+position = Vector2(680, 544)
+scale = Vector2(4, 4)
+
 [node name="bounds" type="Node2D" parent="." unique_id=308553692]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="bounds" unique_id=1839263982]
