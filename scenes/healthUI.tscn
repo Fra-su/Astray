@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cncojspr8cyhd"]
+
+[ext_resource type="PackedScene" uid="uid://c8wxotu6hnask" path="res://scenes/individual_heart.tscn" id="1_6ods4"]
+[ext_resource type="Script" uid="uid://cvvfrxsylrpr1" path="res://scenes/health_ui.gd" id="1_k1x1j"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6ods4"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_k1x1j"]
+light_mode = 1
+
+[node name="Health UI" type="Node2D" unique_id=1292273175]
+material = SubResource("CanvasItemMaterial_6ods4")
+script = ExtResource("1_k1x1j")
+
+[node name="Heart 1" parent="." unique_id=182284775 instance=ExtResource("1_6ods4")]
+
+[node name="Heart 2" parent="." unique_id=1751985778 instance=ExtResource("1_6ods4")]
+position = Vector2(25, 0)
+
+[node name="Heart 3" parent="." unique_id=2078132006 instance=ExtResource("1_6ods4")]
+position = Vector2(50, 0)
+
+[node name="Heart 4" parent="." unique_id=1994607644 instance=ExtResource("1_6ods4")]
+position = Vector2(75, 0)
+
+[node name="Heart 5" parent="." unique_id=859775557 instance=ExtResource("1_6ods4")]
+material = SubResource("CanvasItemMaterial_k1x1j")
+position = Vector2(100, 0)

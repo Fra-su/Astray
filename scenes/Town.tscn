@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://mowenkpavgke"]
+
+[ext_resource type="Texture2D" uid="uid://bceothv6jeuoa" path="res://assets/images/spritesheets/Enemies/Town House 1.png" id="1_bxpib"]
+[ext_resource type="Texture2D" uid="uid://8hpqx8vs3188" path="res://assets/images/other/main.png" id="2_63qkx"]
+
+[node name="Node2D" type="Node2D" unique_id=1498192225]
+
+[node name="TownHouse1" type="Sprite2D" parent="." unique_id=1111073421]
+position = Vector2(-1, 0)
+texture = ExtResource("1_bxpib")
+
+[node name="light" type="PointLight2D" parent="." unique_id=201490135]
+position = Vector2(-52, -95.99999)
+scale = Vector2(0.375, 0.37500015)
+color = Color(0.9918106, 0.61059254, 0.58837974, 1)
+energy = 1.5
+texture = ExtResource("2_63qkx")
+texture_scale = 2.0

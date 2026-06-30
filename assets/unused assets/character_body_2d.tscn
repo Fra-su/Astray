@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dcxdtyiicnt1"]
+
+[ext_resource type="Script" uid="uid://bycl6bey1imp6" path="res://character_body_2d.gd" id="1_ghijl"]
+[ext_resource type="Texture2D" uid="uid://ci4slpjml7uv6" path="res://Cat-idle-spritesheet.png" id="2_44cfe"]
+[ext_resource type="Script" uid="uid://ttbs1bstpyit" path="res://animated_sprite_2d.gd" id="3_dd465"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj586"]
+atlas = ExtResource("2_44cfe")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4d7sh"]
+atlas = ExtResource("2_44cfe")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ir8iy"]
+atlas = ExtResource("2_44cfe")
+region = Rect2(64, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqns4"]
+atlas = ExtResource("2_44cfe")
+region = Rect2(96, 0, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hqns4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rj586")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4d7sh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ir8iy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqns4")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d21ai"]
+size = Vector2(7, 7)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1879881122]
+position = Vector2(192, 397)
+scale = Vector2(4, 4)
+script = ExtResource("1_ghijl")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1386553603]
+position = Vector2(-2.75, -15)
+scale = Vector2(0.25, 0.25)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=4926411]
+texture_filter = 1
+position = Vector2(-22.25, 4.75)
+sprite_frames = SubResource("SpriteFrames_hqns4")
+animation = &"Idle"
+script = ExtResource("3_dd465")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1358991482]
+position = Vector2(-20.75, 9.25)
+shape = SubResource("RectangleShape2D_d21ai")

@@ -1,0 +1,8 @@
+res://scripts/player.gd
+res://scenes/individual_heart.tscn
+res://scenes/game.gdshader
+res://scenes/health_ui.gd
+res://scenes/individual_heart.gd
+res://scenes/healthUI.tscn
+res://scenes/Shrub.tscn
+res://scripts/shrub.gd

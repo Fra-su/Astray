@@ -1,0 +1,40 @@
+res://assets/images/other/main.png::320acc7fc2ab294420c7ad3ae13f8bf80b161d9dfdee5966c3bddb81ec6ddc90::1774415360::
+res://assets/images/spritesheets/Cips and Relics/Cip-Sheet.png::8cc5d0a43dddc0fa40a9576590bef1c39bcfcd91878e9436567cc0fd8361ac16::1774415360::
+res://assets/images/spritesheets/Enemies/Blue Firefly Glow.png::eaba5361eec154d71104fcf6c14f0447522289e0b0a23234af0c6d1dc6fd79a7::1774495729::
+res://assets/images/spritesheets/Enemies/Blue Firefly-Sheet.png::665bde925610c0f758f6422fd4c1f53c917624e86c8074715e1579be00ebf2f6::1774495729::
+res://assets/images/spritesheets/Enemies/Fireflies 2-Sheet.png::ec091936d1756a3ecb6e37f78696b4f5104e092c8d2d448cd0a3abe71dad7d8b::1774495729::
+res://assets/images/spritesheets/Enemies/Fireflies 3-Sheet.png::2eba995e96af3b8532eee799b4eecdbadff024ecdefb614ba70d0ecd4421e5bc::1774495729::
+res://assets/images/spritesheets/Enemies/Firefly Light.png::6141011b1eab19f61420a59a77d9044e09eeef88f126d66ee12832882249a801::1774415360::
+res://assets/images/spritesheets/Enemies/shade Idle-Sheet.png::7e310223904d31bf2c6f57ee73976ddc81044335b0de23477c516f3cbcd3ba8c::1774415360::
+res://assets/images/spritesheets/Enemies/Shade Running-Sheet.png::dc61da864178975a51b59a08b044e5544bf724cac6f14bf0987ee570b599b48c::1774415360::
+res://assets/images/spritesheets/player_cat/climbing.png::53aeb1645c98628af6c8ba8554ca3f5ac9ac4828cdb06389ccee5dc27570cd46::1774415360::
+res://assets/images/spritesheets/player_cat/crouching_idle.png::be7ddd7fa5f659dfa8794e454ff37bdf75bb99114642ecb3d2e4a036a1856c60::1774415360::
+res://assets/images/spritesheets/player_cat/crouching_running.png::08abadb4fdfb87e454b0e991f4dc2071652c0a68b838ebaef531c4cd6f167a82::1774415360::
+res://assets/images/spritesheets/player_cat/ide_to_sit.png::aff61ae14f6b17064c25eba0563bbff703ea8ce833c5a9943101fe635e67f4e0::1774565916::
+res://assets/images/spritesheets/player_cat/idle.png::c7e93179f24369520548fa642c83e148c53ba3c360abe6de8ba0eef67ab6cdb9::1774415360::
+res://assets/images/spritesheets/player_cat/jumping.png::c03c3b58bc78b9a22888f39aefda76e9c83cdd466e12627162275e153176b483::1774415360::
+res://assets/images/spritesheets/player_cat/running.png::cd7b38e24fe929be325343a33c4485cc3e8dc48268c0e649b6449218ddf35689::1774415360::
+res://assets/images/spritesheets/player_cat/sitting.png::9b537a473b33e7fe8f437b96dc34dc6ea063cc1d4d9d545cafaf8b8814788903::1774415360::
+res://assets/images/spritesheets/player_cat/sleeping.png::e3939bdb44a19dcda3508f4b62f844ba72e9b17767d89ceb00685596a18068b9::1774415360::
+res://assets/images/spritesheets/player_cat/waking.png::9b4c7707597d4359d4dcf408b497984c0e98bc57f2a9c847bdb4c98081ddf2a3::1774565896::
+res://assets/images/tilesets/background_color.png::1fa47ea9b9b65d30f63cfbd316ae6f350efe2f3aefeb9e7ce88c57b224fd66ea::1774415360::
+res://assets/images/tilesets/collision.svg::ca42da7c8de50c8e45675bc61e6b313787ad45d81bf1c0692dd40d0b3fb7c516::1774415360::
+res://assets/images/tilesets/Firefly Forest Background Details.png::26a539354eddf89966ff6c7afc2e3169ae541f177d89a1e0f83f20325d2a807f::1774415360::
+res://assets/images/tilesets/Firefly Forest Background Tileset.png::07b102ce0497b9c8e491cafe9feab9b2aa32287a56eabad4803360d8fd606fe2::1774415360::
+res://assets/images/tilesets/Firefly Forest Background.png::50830d062f3452c5e9d7fbd66794d8a58b648004d6b11368f01a7258da3ac852::1774415360::
+res://assets/images/tilesets/Firefly Forest Hazard.png::ae10f88318506524f1db12d41518f71dc32984a1b330a662ee67b37c4e0ff767::1774415360::
+res://assets/images/tilesets/Firefly Forest Tileset Overlay.png::4d3162ae0f6e36cbcc474430079d7b5068d1832ba3f46d3017d2ff16b0bb9d2e::1774415360::
+res://assets/images/tilesets/testing_block.png::57a33178a06e6bb7296504963f1e7fd60e1e86ef04518e5d385c4e6f564203b8::1774415360::
+res://assets/unused assets/Cat Climbing1.png::d79242eb3c4d78a14d9646edc03252ab07b875f77b9afcd7f67c92d7baeb448a::1774415360::
+res://assets/unused assets/Cat Climbing2.png::35f7618ba718bfd15cfa89500ecb2a3e949be76c3eb0ba1864482ca12dbc982e::1774415360::
+res://assets/unused assets/Cat Climbing3.png::a786c1b0b896f824ca1f1f1015b2e75f776b581ac280d7189122f9e56b6853e4::1774415360::
+res://assets/unused assets/Cat Climbing4.png::03c87703bdee6a0639d8f230068f3fa4e70181cdc6b60a4da3abfe134a065241::1774415360::
+res://assets/unused assets/character_body_2d.tscn::2ee4001a1ac2271cd56720efaeb8ae32::1774415360::res://.godot/exported/856468303/export-8e0092b31bab85fb128f6fd850ccd0db-character_body_2d.scn
+res://assets/unused assets/node_2d.tscn::9caafd88ce4576ef2504cc30e3ffdf4b::1774415360::res://.godot/exported/856468303/export-4202dc878886484f06f08aa6c1b5d3b3-node_2d.scn
+res://assets/unused assets/Tiles and stuff.tscn::860b7411d3fc7e218542567d710579ad::1774415360::res://.godot/exported/856468303/export-e359d60ca84ceef9768374baf78b12fa-Tiles and stuff.scn
+res://scenes/blue_fireflies.tscn::66508372e786755593016fb4cde2e2bf::1774495729::res://.godot/exported/856468303/export-29daee333a806c3e5f3554447ac344bf-blue_fireflies.scn
+res://scenes/cip.tscn::e9f38e8aa07afb3326951cf96b38456f::1774564889::res://.godot/exported/856468303/export-49201b6d40c288a4e9119fccfe9c26e0-cip.scn
+res://scenes/fireflies.tscn::fb9047beee035aafd62c10a1260053a6::1774495729::res://.godot/exported/856468303/export-aafba3cfbbe9dc691ad804835ddc7f61-fireflies.scn
+res://scenes/game.tscn::74ad7523d4513dd18f719ac18573ec08::1774495729::res://.godot/exported/856468303/export-c2a7af834e91ff64325daddf58e45dc0-game.scn
+res://scenes/player.tscn::90111a9a976dbe2fe336c53793867c6b::1774566401::res://.godot/exported/856468303/export-234fb6894ec6226e856ab7f825500d3d-player.scn
+res://scenes/shade.tscn::5c027209b84cf27b4d1ee6452f464638::1774495729::res://.godot/exported/856468303/export-e7ce1f1dddbc28a43506a66b86e0b915-shade.scn

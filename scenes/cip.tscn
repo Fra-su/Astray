@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://cgjwy3ime4wpi"]
+
+[ext_resource type="Script" uid="uid://elwjyd6p31fs" path="res://scripts/cip.gd" id="1_jiyim"]
+[ext_resource type="Texture2D" uid="uid://bg2xo343ghw4j" path="res://assets/images/spritesheets/Cips and Relics/Cip-Sheet.png" id="1_umpwq"]
+[ext_resource type="Texture2D" uid="uid://8hpqx8vs3188" path="res://assets/images/other/main.png" id="2_23jad"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umpwq"]
+atlas = ExtResource("1_umpwq")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7h6lx"]
+atlas = ExtResource("1_umpwq")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgwuq"]
+atlas = ExtResource("1_umpwq")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i03c2"]
+atlas = ExtResource("1_umpwq")
+region = Rect2(24, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2splw"]
+atlas = ExtResource("1_umpwq")
+region = Rect2(32, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlin0"]
+atlas = ExtResource("1_umpwq")
+region = Rect2(40, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kl6a8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umpwq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7h6lx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgwuq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i03c2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2splw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlin0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="Cip" type="Node2D" unique_id=2063378718]
+texture_filter = 1
+scale = Vector2(4, 4)
+script = ExtResource("1_jiyim")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1994237926]
+sprite_frames = SubResource("SpriteFrames_kl6a8")
+frame_progress = 0.82930315
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1226282742]
+color = Color(1, 1, 0.79607844, 1)
+texture = ExtResource("2_23jad")
+texture_scale = 0.4

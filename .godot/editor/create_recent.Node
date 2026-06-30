@@ -1,0 +1,14 @@
+CollisionShape2D
+Area2D
+CanvasLayer
+AnimatedSprite2D
+StaticBody2D
+Node2D
+ShapeCast2D
+CharacterBody2D
+RayCast2D
+Sprite2D
+TileMapLayer
+PointLight2D
+DirectionalLight2D
+Timer

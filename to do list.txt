@@ -1,0 +1,5 @@
+- add climbing (half done) (broken)
+- GD robot jumps
+- animation turn to idle when hitting wall
+- player animation based on y vel
+- leaping with dash but ground?

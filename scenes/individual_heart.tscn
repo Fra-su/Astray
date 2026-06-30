@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://c8wxotu6hnask"]
+
+[ext_resource type="Script" uid="uid://beqhxnl1d3p15" path="res://scenes/individual_heart.gd" id="1_458qx"]
+[ext_resource type="Texture2D" uid="uid://bp1xffmaiyf1x" path="res://assets/images/spritesheets/other/HeartDie-Sheet.png" id="1_hmqxp"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hmqxp"]
+light_mode = 1
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmqxp"]
+atlas = ExtResource("1_hmqxp")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_458qx"]
+atlas = ExtResource("1_hmqxp")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n66cr"]
+atlas = ExtResource("1_hmqxp")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82abq"]
+atlas = ExtResource("1_hmqxp")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3gut"]
+atlas = ExtResource("1_hmqxp")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hd1jk"]
+atlas = ExtResource("1_hmqxp")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfpt2"]
+atlas = ExtResource("1_hmqxp")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2wty"]
+atlas = ExtResource("1_hmqxp")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icrpj"]
+atlas = ExtResource("1_hmqxp")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5uwco"]
+atlas = ExtResource("1_hmqxp")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8pl8"]
+atlas = ExtResource("1_hmqxp")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wcutd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmqxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_458qx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n66cr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82abq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3gut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hd1jk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfpt2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2wty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icrpj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5uwco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k8pl8")
+}],
+"loop": false,
+"name": &"take_damage",
+"speed": 20.0
+}]
+
+[node name="Heart" type="Node2D" unique_id=182284775]
+script = ExtResource("1_458qx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1360195290]
+light_mask = 2
+material = SubResource("CanvasItemMaterial_hmqxp")
+sprite_frames = SubResource("SpriteFrames_wcutd")
+animation = &"take_damage"
