@@ -1,2 +1,8 @@
-res://scenes/game.tscn
+res://scenes/Shrub.tscn
 res://scenes/game.gdshader
+res://to do list.txt
+res://scenes/player.tscn
+res://firefly_particle.tscn
+res://tutorial_text.gd
+res://tutorial_text.tscn
+res://scenes/game.tscn

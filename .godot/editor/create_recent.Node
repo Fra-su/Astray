@@ -1,7 +1,9 @@
-Area2D
 Node2D
-CollisionShape2D
 CanvasLayer
+Area2D
+CollisionShape2D
+Label
+GPUParticles2D
 AnimatedSprite2D
 StaticBody2D
 ShapeCast2D
@@ -10,5 +12,3 @@ RayCast2D
 Sprite2D
 TileMapLayer
 PointLight2D
-DirectionalLight2D
-Timer

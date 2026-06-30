@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c6ds72j6jakd7"]
+[gd_scene load_steps=74 format=3 uid="uid://c6ds72j6jakd7"]
 
 [ext_resource type="Texture2D" uid="uid://c8qtrgjtkbiw5" path="res://assets/images/spritesheets/player_cat/idle.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://do62elngv6cn7" path="res://scripts/player.gd" id="1_g2els"]
@@ -470,68 +470,69 @@ size = Vector2(10, 8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_smehm"]
 size = Vector2(9.9, 3)
 
-[node name="player" type="CharacterBody2D" unique_id=2019189749 groups=["player"]]
+[node name="player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(2, 2)
 collision_layer = 2
 script = ExtResource("1_g2els")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=811242530]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_qfm1y")
 animation = &"idle"
 autoplay = "idle"
 
-[node name="hitbox" type="ShapeCast2D" parent="." unique_id=2021478164]
+[node name="hitbox" type="ShapeCast2D" parent="."]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(1, 8)
 shape = SubResource("RectangleShape2D_f1ej7")
 target_position = Vector2(0, 0)
 collision_mask = 4
 
-[node name="body" type="CollisionShape2D" parent="." unique_id=1781272868]
+[node name="body" type="CollisionShape2D" parent="."]
 position = Vector2(1, 12)
 shape = SubResource("RectangleShape2D_qlg0r")
 
-[node name="ShapeCast2D" type="ShapeCast2D" parent="body" unique_id=48215455]
+[node name="ShapeCast2D" type="ShapeCast2D" parent="body"]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_3v2ag")
 target_position = Vector2(0, -10)
 
-[node name="head" type="CollisionShape2D" parent="." unique_id=1592994112]
+[node name="head" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 4)
 shape = SubResource("RectangleShape2D_dqkch")
 
-[node name="ShapeCast2D" type="ShapeCast2D" parent="head" unique_id=1756545487]
+[node name="ShapeCast2D" type="ShapeCast2D" parent="head"]
 position = Vector2(0, -2.5)
 shape = SubResource("RectangleShape2D_smehm")
 target_position = Vector2(0, 0)
 
-[node name="timers" type="Node2D" parent="." unique_id=1409466000]
+[node name="timers" type="Node2D" parent="."]
 position = Vector2(0, 6)
 
-[node name="sit" type="Timer" parent="timers" unique_id=1186399708]
+[node name="sit" type="Timer" parent="timers"]
 wait_time = 10.0
 one_shot = true
 autostart = true
 
-[node name="sleep" type="Timer" parent="timers" unique_id=516174039]
+[node name="sleep" type="Timer" parent="timers"]
 wait_time = 20.0
 one_shot = true
 autostart = true
 
-[node name="light" type="PointLight2D" parent="." unique_id=137904278]
+[node name="light" type="PointLight2D" parent="."]
 position = Vector2(1.5, 0)
 energy = 0.9
 texture = ExtResource("10_y4r1p")
 texture_scale = 2.0
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1161287373]
+[node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
+limit_bottom = 760
 position_smoothing_speed = 100.0
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1847616816]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Health UI" parent="CanvasLayer" unique_id=1292273175 instance=ExtResource("13_jej6c")]
+[node name="Health UI" parent="CanvasLayer" instance=ExtResource("13_jej6c")]
 texture_filter = 1
 position = Vector2(55, 80)
 scale = Vector2(3, 3)

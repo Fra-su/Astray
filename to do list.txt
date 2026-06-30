@@ -1,5 +1,12 @@
-- add climbing (half done) (broken)
-- GD robot jumps
-- animation turn to idle when hitting wall
-- player animation based on y vel
-- leaping with dash but ground?
+To-do list
+--------------
+School
+- Get rid of 'monument'
+- Bigger map
+- Menu
+
+Home
+- Make static hurtboxes ignore i-frames
+- Death / take damage sequence
+- Add attacking
+- Loading 'levels'

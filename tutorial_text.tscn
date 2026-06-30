@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5nd6kk28smqn"]
+
+[ext_resource type="Script" uid="uid://byitu7tncgcmn" path="res://tutorial_text.gd" id="1_mfcn2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_omot2"]
+size = Vector2(210, 103)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_mfcn2")
+
+[node name="hitbox" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(-2, -52)
+shape = SubResource("RectangleShape2D_omot2")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -28.0
+offset_top = -2.0
+offset_right = 27.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2

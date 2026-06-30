@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bgs83f6154ahs"]
+[gd_scene load_steps=14 format=3 uid="uid://bgs83f6154ahs"]
 
 [ext_resource type="Texture2D" uid="uid://dv6xufm5tneqn" path="res://assets/images/spritesheets/Enemies/Shrub-Sheet.png" id="1_px0su"]
 [ext_resource type="Script" uid="uid://cprnxvpsfh8ub" path="res://scripts/shrub.gd" id="1_skkrm"]
@@ -66,39 +66,36 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_briay"]
-size = Vector2(52, 52)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbgtm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_daj1n"]
-size = Vector2(52, 52)
+size = Vector2(56, 52)
 
-[node name="Shrub" type="CharacterBody2D" unique_id=964134891]
+[node name="Shrub" type="CharacterBody2D"]
 collision_layer = 8
 script = ExtResource("1_skkrm")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1289356987]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -9)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_6gnl2")
-animation = &"shrub turn"
-frame_progress = 0.8569964
+frame_progress = 0.66709286
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=871633760]
-visible = false
-position = Vector2(-2, 29)
-shape = SubResource("RectangleShape2D_briay")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 45)
+shape = SubResource("RectangleShape2D_xbgtm")
 
-[node name="Wall Check" type="RayCast2D" parent="." unique_id=1141089078]
+[node name="Wall Check" type="RayCast2D" parent="."]
 position = Vector2(-2, 30)
-target_position = Vector2(30, 0)
+target_position = Vector2(34, 0)
 
-[node name="Floor Check" type="RayCast2D" parent="." unique_id=1634547419]
+[node name="Floor Check" type="RayCast2D" parent="."]
 position = Vector2(28, 29)
 target_position = Vector2(0, 32)
 
-[node name="Hurtbox" type="Area2D" parent="." unique_id=372872061]
+[node name="Hurtbox" type="Area2D" parent="."]
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=409476160]
-position = Vector2(-2, 29)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(0, 29)
 shape = SubResource("RectangleShape2D_daj1n")
