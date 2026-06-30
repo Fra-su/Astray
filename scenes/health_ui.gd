@@ -7,7 +7,7 @@ var health := 5
 var max_health := 5
 
 func _ready() -> void:
-	player.take_damage.connect(damage_player)
+	player.damaged.connect(damage_player)
 
 func damage_player() -> void:
 	if health <= 0: #Cannot damage if health is less than 0.

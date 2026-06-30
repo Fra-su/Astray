@@ -97,6 +97,7 @@ position = Vector2(28, 29)
 target_position = Vector2(0, 32)
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=372872061]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=409476160]
 position = Vector2(-2, 29)

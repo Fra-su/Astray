@@ -5,20 +5,13 @@ extends CharacterBody2D
 @export var jump_power := 600
 
 #Take damage signal
-signal take_damage()
+signal damaged()
 
 #movement
 var dir                 := Vector2()
 var speed_mod           := 1.0
 var gravity_mod         := 1.0
 var velocity_last_frame := Vector2.ZERO #idk what for
-
-#stamina costs
-var stamina_max            := 100.0 #large stamina value for testing
-var stamina                := stamina_max
-var stamina_drain_climb    := 18.0 #stamina drain while climbing walls
-var stamina_drain_grip     := 12.0 #stamina drain while just griping stationaty on wall
-var stamina_cost_wall_jump := 20.0 #stamina cost for wall jumping
 
 #state
 var crouching           := false
@@ -56,6 +49,10 @@ var springshrooms      := [] #all of the springshrooms in a list for optimisatio
 #checkpoints and teleport points
 var last_checkpoint := Vector2(768, 550)
 
+#i-frames (invincibility flicker after taking damage)
+var iframe_duration := 1.2 #how long invincibility lasts after a hit, in seconds
+var iframe_flicker_time := 0.1 #how long each opacity step lasts
+
 #modifier values for either jumping or running
 var mod_values = {
 	"crouching" : 0.6,
@@ -69,11 +66,40 @@ func _ready(): #runs on start
 #	make a preloaded list of springshrooms so we dont have to generate a new list every single time
 	for shroom in get_tree().get_nodes_in_group("springshroom"):
 		springshrooms.append(shroom)
-		
-func cap(value, min_val, max_val): #may be broken
-	value = min(value, max_val) if max_val else value
-	value = max(value, min_val) if min_val else value
-	return value
+
+func take_damage() -> void:
+	if invincible:
+		return
+	velocity = Vector2.ZERO
+	position = last_checkpoint
+	snap_out_of_floor()
+	damaged.emit()
+	start_iframes()
+
+func snap_out_of_floor() -> void:
+#	if the checkpoint was placed slightly into the ground, nudge the player up until clear
+	var nudge := Vector2(0, -1) #move up 1 pixel at a time
+	var max_attempts := 100     #safety cap so this can't loop forever
+
+	for i in max_attempts:
+		if not test_move(global_transform, nudge):
+			break
+		global_position += nudge
+
+func start_iframes() -> void:
+	invincible = true
+
+	var elapsed := 0.0
+	var flashed_dim := false
+
+	while elapsed < iframe_duration:
+		flashed_dim = not flashed_dim
+		modulate.a = 0.7 if flashed_dim else 1.0
+		await get_tree().create_timer(iframe_flicker_time).timeout
+		elapsed += iframe_flicker_time
+
+	modulate.a = 1.0
+	invincible = false
 
 func animate(): #could prbly optimise
 #	flip the sprite based on direction
@@ -125,16 +151,6 @@ func update_timers():
 		
 	#for timer debugging
 	#print(str($timers/sit.time_left) + "   " + str($timers/sleep.time_left))
-	
-func update_stamina(delta):
-	if is_on_floor(): #reset stamina when on ground
-		stamina = stamina_max
-	elif climbing: #stamina for climbing
-#		choose which amount of stamina do deduct, grip or climb
-		stamina -= (stamina_drain_climb if climbing_moving else stamina_drain_grip) * delta
-		
-		#cap the stamina at min 0
-		stamina = cap(stamina, 0, null) #may be broken
 
 func force_state_update():
 	if not is_on_floor(): #force crouching to be off when not on ground
@@ -143,11 +159,6 @@ func force_state_update():
 		push_error("2 states are active at the same time")
 
 func climb(im):
-#	cant climb if stamina is below or equal to 0
-	if stamina < 1:
-		climbing = false
-		return
-		
 	climbing = true #we are climbing
 	speed_mod = mod_values["climb"] #modify speed on wall
  
@@ -155,14 +166,7 @@ func climb(im):
 		climbing = false #make no longer climbing as if not going off wall they can just stick back
 		wall_jump_cooldown = wall_jump_cooldown_time #make a jump cooldown in frames
 		jump_frames = jump_duration #idk
-		stamina -= stamina_cost_wall_jump #reduce stamina by correct amount
-		stamina = cap(stamina, 0, null) #cap stamina at min 0
-
-#		the less stamina the less of a jump, so ratio
-		var ratio = cap(stamina / stamina_cost_wall_jump, null, 1.0) #cap ratio at max 1.0
-
-		#velocity.x = dir.x * speed if dir.x else velocity.x #redundant but here for now
-		velocity.y = -jump_power * ratio #jump with correct ratio
+		velocity.y = -jump_power #jump
 	elif dir.y: #going up or down with no jump
 		climbing_moving = true #we are moving
 		velocity.y = speed * dir.y #move correctly
@@ -232,16 +236,13 @@ func update_vel(delta):
 
 #	check if touching hurtbox
 	if $hitbox.is_colliding():
-		velocity = Vector2.ZERO #reset vel so no floor clipping and no previous movement
-		position = last_checkpoint #send to last checkpoint pos
-		take_damage.emit()
+		take_damage()
 
 func _physics_process(delta: float) -> void:
 	if land_frames <= 0: #idk yet
 		allow_input = true
 
 	get_input()
-	update_stamina(delta) #update the stamina of the player
 	update_timers() #update sleep and sit timers
 	toggle_crouch()
 	force_state_update()

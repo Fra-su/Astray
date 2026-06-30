@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://dntsbnr0ip1w1" path="res://scenes/springshroom.tscn" id="16_ca42v"]
 [ext_resource type="PackedScene" uid="uid://bgs83f6154ahs" path="res://scenes/Shrub.tscn" id="18_ssvqc"]
 [ext_resource type="PackedScene" uid="uid://mowenkpavgke" path="res://scenes/Town.tscn" id="19_264po"]
+[ext_resource type="PackedScene" uid="uid://c7cjety3ojp8d" path="res://scenes/checkpoint.tscn" id="20_1kice"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trtic"]
 texture = ExtResource("1_0tnpc")
@@ -2259,6 +2260,14 @@ position = Vector2(-816, 384)
 color = Color(0.2087101, 0.2087102, 0.2087099, 1)
 energy = 3.8
 blend_mode = 1
+
+[node name="Checkpoints" type="Node2D" parent="." unique_id=1445647655]
+
+[node name="Checkpoint" parent="Checkpoints" unique_id=867319694 instance=ExtResource("20_1kice")]
+position = Vector2(1424, 384)
+
+[node name="Checkpoint2" parent="Checkpoints" unique_id=1771610134 instance=ExtResource("20_1kice")]
+position = Vector2(1008, 512)
 
 [node name="bounds" type="Node2D" parent="." unique_id=308553692]
 

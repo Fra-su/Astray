@@ -6,3 +6,7 @@ res://scenes/individual_heart.gd
 res://scenes/healthUI.tscn
 res://scenes/Shrub.tscn
 res://scripts/shrub.gd
+res://scenes/player.tscn
+res://scenes/checkpoint.tscn
+res://scenes/checkpoint.gd
+res://scenes/game.tscn
