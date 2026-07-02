@@ -1,8 +1,9 @@
-res://
-res://assets/images/spritesheets/other
+res://assets/images/spritesheets/player_cat/
 res://scenes/
+res://scenes/rooms/
+res://scripts/
+res://
+res://assets/images/spritesheets/other/
 res://assets/images/spritesheets/other/
 res://assets/images/spritesheets/Enemies/
-res://assets/images/spritesheets/player_cat/
-res://scripts/
 res://assets/images/spritesheets/

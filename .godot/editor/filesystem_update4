@@ -1,8 +1,9 @@
-res://scenes/Shrub.tscn
+res://scenes/transition.tscn
 res://scenes/game.gdshader
-res://to do list.txt
-res://scenes/player.tscn
-res://firefly_particle.tscn
-res://tutorial_text.gd
-res://tutorial_text.tscn
-res://scenes/game.tscn
+res://scripts/transition.gd
+res://scenes/rooms/town_room.tscn
+res://door.gd
+res://scripts/game_state.gd
+res://scripts/player.gd
+res://scenes/rooms/tutorial.tscn
+res://scenes/rooms/room_base.tscn

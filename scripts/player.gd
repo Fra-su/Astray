@@ -21,7 +21,12 @@ var allow_input         := true
 var was_on_floor        := false #if on floor last frame
 var invincible          := false
 
-#transition frame timers
+#transitions
+var transition_locked   := false #blocks input during room transitions, separate from allow_input
+var locked_velocity := Vector2.ZERO
+var locked_velocity_timer := 0.0 # counts down; while > 0, velocity is forced to locked_velocity
+var transition_lift_duration := 0.7
+
 #idk what all for
 var land_frames             := 0
 var jump_frames             := 0
@@ -61,15 +66,34 @@ var mod_values = {
 }
 
 func _ready(): #runs on start
-#	this allows faster distance calculations as we dont need to square root but instead we need to square the value
+	#this allows faster distance calculations as we dont need to square root but instead we need to square the value
 	shroom_jump_radius *= shroom_jump_radius
-#	make a preloaded list of springshrooms so we dont have to generate a new list every single time
+	#make a preloaded list of springshrooms so we dont have to generate a new list every single time
 	for shroom in get_tree().get_nodes_in_group("springshroom"):
 		springshrooms.append(shroom)
+
+	#if we just arrived from a door, spawn at the position it specified and carry velocity over
+	if GameState.has_pending_spawn:
+		position = GameState.next_spawn_position
+		last_checkpoint = GameState.next_spawn_position
+		velocity = Vector2.ZERO
+		transition_locked = true
+		GameState.has_pending_spawn = false
+
+func resume_carried_velocity(vel: Vector2, duration: float) -> void:
+	locked_velocity = vel
+	locked_velocity_timer = duration
+	velocity = vel	
 
 func take_damage() -> void:
 	if invincible:
 		return
+	_apply_damage()
+
+func take_hazard_damage() -> void:
+	_apply_damage() #ignores invincible entirely, always deals damage
+
+func _apply_damage() -> void:
 	velocity = Vector2.ZERO
 	position = last_checkpoint
 	snap_out_of_floor()
@@ -77,7 +101,7 @@ func take_damage() -> void:
 	start_iframes()
 
 func snap_out_of_floor() -> void:
-#	if the checkpoint was placed slightly into the ground, nudge the player up until clear
+	#if the checkpoint was placed slightly into the ground, nudge the player up until clear
 	var nudge := Vector2(0, -1) #move up 1 pixel at a time
 	var max_attempts := 100     #safety cap so this can't loop forever
 
@@ -102,7 +126,7 @@ func start_iframes() -> void:
 	invincible = false
 
 func animate(): #could prbly optimise
-#	flip the sprite based on direction
+	#flip the sprite based on direction
 	$AnimatedSprite2D.flip_h = dir.x < 0 if dir.x != 0 else $AnimatedSprite2D.flip_h
 	
 	var animation = "" #the animation we will play
@@ -112,7 +136,7 @@ func animate(): #could prbly optimise
 	elif $timers/sit.is_stopped():
 		animation = "sitting"
 	elif crouching:
-#		we are crouching but depending on if we are moving we play a different animation
+		#we are crouching but depending on if we are moving we play a different animation
 		animation = "crouching_running" if dir.x and not $body/ShapeCast2D.is_colliding() else "crouching_idle"
 	elif climbing:
 		animation = "climbing"
@@ -185,7 +209,7 @@ func get_input():
 	climbing = false if wall_jump_cooldown < 1 else climbing #not allow climbing if cooldown is active
 	
 	#block or not block input
-	if not allow_input:
+	if not allow_input or transition_locked:
 		return
 	
 	#get axis but no normalization as we dont want speed decrease
@@ -227,6 +251,22 @@ func get_input():
 			velocity.y /= 1.5 #fix magic number
 
 func update_vel(delta):
+	if locked_velocity_timer > 0.0:
+		locked_velocity_timer -= delta
+		velocity = locked_velocity
+		if $hitbox.is_colliding():
+			var collider = $hitbox.get_collider(0)
+			if collider and collider.is_in_group("hazard"):
+				take_hazard_damage()
+			else:
+				take_damage()
+		return
+
+	if transition_locked:
+		# input is locked during a transition, but let existing velocity keep playing out
+		# without gravity pulling the player down mid-fade
+		return
+
 	if not is_on_floor() and not climbing:
 		velocity.y += gravity * delta * gravity_mod
 	if land_frames > 0:
@@ -234,9 +274,12 @@ func update_vel(delta):
 	else:
 		velocity.x = dir.x * speed * speed_mod
 
-#	check if touching hurtbox
 	if $hitbox.is_colliding():
-		take_damage()
+		var collider = $hitbox.get_collider(0)
+		if collider and collider.is_in_group("hazard"):
+			take_hazard_damage()
+		else:
+			take_damage()
 
 func _physics_process(delta: float) -> void:
 	if land_frames <= 0: #idk yet
