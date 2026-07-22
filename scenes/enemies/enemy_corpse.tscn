@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://4tkkmdw4fqxx"]
+
+[ext_resource type="Script" uid="uid://cropp2vyru0kk" path="res://enemy_corpse.gd" id="1_r4xhg"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r4xhg"]
+friction = 0.6
+bounce = 0.3
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i6qrp"]
+radius = 20.0
+
+[node name="EnemyCorpse" type="RigidBody2D" unique_id=737872676 groups=["corpse"]]
+collision_layer = 8
+physics_material_override = SubResource("PhysicsMaterial_r4xhg")
+script = ExtResource("1_r4xhg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=397924050]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=82746031]
+shape = SubResource("CircleShape2D_i6qrp")

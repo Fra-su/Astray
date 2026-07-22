@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://b3vb3cdb2ca1m"]
+
+[ext_resource type="Script" uid="uid://71js8yfoyym0" path="res://scenes/interactables/lever.gd" id="1_kv8us"]
+[ext_resource type="Texture2D" uid="uid://ytmh5slr74uk" path="res://assets/images/spritesheets/other/Gate Lever-Sheet.png" id="2_cyoba"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuqvr"]
+atlas = ExtResource("2_cyoba")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0fk0"]
+atlas = ExtResource("2_cyoba")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_noju5"]
+atlas = ExtResource("2_cyoba")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3o77"]
+atlas = ExtResource("2_cyoba")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_foypc"]
+atlas = ExtResource("2_cyoba")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vgf15"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yuqvr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w0fk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_noju5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3o77")
+}],
+"loop": false,
+"name": &"activated",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_foypc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cc56b"]
+size = Vector2(22, 16)
+
+[node name="Lever" type="StaticBody2D" unique_id=2122772413 groups=["corpse"]]
+scale = Vector2(4, 4)
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_kv8us")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1179894381]
+sprite_frames = SubResource("SpriteFrames_vgf15")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1377335457]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_cc56b")

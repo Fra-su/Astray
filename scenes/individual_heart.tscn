@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c8wxotu6hnask"]
 
-[ext_resource type="Script" uid="uid://beqhxnl1d3p15" path="res://scenes/individual_heart.gd" id="1_458qx"]
+[ext_resource type="Script" uid="uid://beqhxnl1d3p15" path="res://individual_heart.gd" id="1_458qx"]
 [ext_resource type="Texture2D" uid="uid://bp1xffmaiyf1x" path="res://assets/images/spritesheets/other/HeartDie-Sheet.png" id="1_hmqxp"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hmqxp"]

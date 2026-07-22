@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c7cjety3ojp8d"]
 
-[ext_resource type="Script" uid="uid://dahan3xqdcfx1" path="res://scenes/checkpoint.gd" id="1_yyywg"]
+[ext_resource type="Script" uid="uid://dahan3xqdcfx1" path="res://scripts/checkpoint.gd" id="1_yyywg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ywqth"]
 radius = 20.0

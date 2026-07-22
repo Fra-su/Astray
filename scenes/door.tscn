@@ -8,7 +8,9 @@ size = Vector2(164, 178)
 [node name="Door" type="Area2D" unique_id=223550071]
 collision_mask = 2
 script = ExtResource("1_hpvv5")
-target_scene = "d"
+target_scene = "hi"
+spawn_position = null
+area_name = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1093921145]
 shape = SubResource("RectangleShape2D_uvdjg")

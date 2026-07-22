@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://51ojg7nxtfq0"]
+
+[ext_resource type="Texture2D" uid="uid://dukntxdmsn4j1" path="res://assets/images/spritesheets/Enemies/Firefly Hive.png" id="1_lt1cb"]
+[ext_resource type="Script" uid="uid://bl3vb00vwxdca" path="res://scripts/enemy scripts/firefly_hive.gd" id="1_ta3wr"]
+[ext_resource type="PackedScene" uid="uid://qkqya8y2k2kn" path="res://scenes/enemy_health.tscn" id="2_ta3wr"]
+[ext_resource type="PackedScene" uid="uid://dii0akogw0erq" path="res://scenes/hit_flash.tscn" id="3_e8ox6"]
+[ext_resource type="PackedScene" uid="uid://du8wfam4xyo06" path="res://scenes/HazardDetector.tscn" id="4_60n7x"]
+[ext_resource type="Shader" uid="uid://bfx26mngmldvn" path="res://shaders/hit_flash.gdshader" id="5_e8ox6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e8ox6"]
+shader = ExtResource("5_e8ox6")
+shader_parameter/flash_color = Color(0, 0.784, 0.875, 1)
+shader_parameter/flash_amount = 0.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ggk1v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lt1cb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lt1cb")
+}],
+"loop": false,
+"name": &"die",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_euufv"]
+size = Vector2(12, 17.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qywbu"]
+size = Vector2(48, 44)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_60n7x"]
+shader = ExtResource("5_e8ox6")
+shader_parameter/flash_color = Color(0, 0.784, 0.875, 1)
+shader_parameter/flash_amount = 0.0
+
+[node name="Firefly Hive" type="CharacterBody2D" unique_id=1276523702]
+scale = Vector2(4, 4)
+collision_layer = 8
+script = ExtResource("1_ta3wr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=641116435]
+material = SubResource("ShaderMaterial_e8ox6")
+sprite_frames = SubResource("SpriteFrames_ggk1v")
+animation = &"die"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=380016230]
+position = Vector2(0, -6.625)
+shape = SubResource("RectangleShape2D_euufv")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=993663916]
+position = Vector2(0, -6)
+scale = Vector2(0.32, 0.45)
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1523963103]
+shape = SubResource("RectangleShape2D_qywbu")
+
+[node name="Enemy_Health" parent="." unique_id=26889117 instance=ExtResource("2_ta3wr")]
+max_health = 21
+
+[node name="HitFlash" parent="." unique_id=1405195646 instance=ExtResource("3_e8ox6")]
+material = SubResource("ShaderMaterial_60n7x")
+
+[node name="HazardDetector" parent="." unique_id=1743736976 instance=ExtResource("4_60n7x")]
+position = Vector2(0, -5.75)
+scale = Vector2(0.32, 0.38)

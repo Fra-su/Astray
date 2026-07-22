@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dawscuo0dggyc"]
+
+[ext_resource type="Texture2D" uid="uid://cqaqgfplp00nw" path="res://assets/images/spritesheets/other/energy bar/Energy bar back.png" id="1_hk11k"]
+[ext_resource type="Shader" uid="uid://bsjglo2e06vmp" path="res://shaders/energy_bar.gdshader" id="1_ypsb4"]
+[ext_resource type="Texture2D" uid="uid://geogvvp6v17c" path="res://assets/images/spritesheets/other/energy bar/Energy bar middle.png" id="2_cpl0g"]
+[ext_resource type="Script" uid="uid://c3j0d7pcxvpuj" path="res://scripts/energy_bar_middle.gd" id="3_cpl0g"]
+[ext_resource type="Texture2D" uid="uid://ckf4gfi0nq2v" path="res://assets/images/spritesheets/other/energy bar/Energy bar top.png" id="3_ypsb4"]
+[ext_resource type="Texture2D" uid="uid://b8100a40i8m8s" path="res://assets/images/spritesheets/other/energy bar/crystal.png" id="6_msqa6"]
+[ext_resource type="Script" uid="uid://cqncew8xsdfyk" path="res://scripts/energy_crystal.gd" id="7_c53gp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ypsb4"]
+shader = ExtResource("1_ypsb4")
+shader_parameter/bar_width_px = 42.0
+shader_parameter/energy_pixels = 0.0
+shader_parameter/pixel_shift = 9.0
+shader_parameter/reverse_direction = false
+shader_parameter/wave_amplitude = 0.5
+shader_parameter/wave_frequency = 14.0
+shader_parameter/wave_speed = 2.5
+
+[node name="EnergyBar" type="Node2D" unique_id=357589375]
+
+[node name="EnergyBarBottom" type="Sprite2D" parent="." unique_id=860944357]
+texture = ExtResource("1_hk11k")
+
+[node name="EnergyBarMiddle" type="Sprite2D" parent="." unique_id=1207801449]
+material = SubResource("ShaderMaterial_ypsb4")
+texture = ExtResource("2_cpl0g")
+script = ExtResource("3_cpl0g")
+
+[node name="EnergyBarTop" type="Sprite2D" parent="." unique_id=447599477]
+texture = ExtResource("3_ypsb4")
+
+[node name="Crystal" type="Sprite2D" parent="." unique_id=2013708689]
+position = Vector2(-26.5, -1.5)
+texture = ExtResource("6_msqa6")
+script = ExtResource("7_c53gp")

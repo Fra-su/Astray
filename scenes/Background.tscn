@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://cxheyvv4eh30f"]
+
+[ext_resource type="Texture2D" uid="uid://c5fhrt3h1l272" path="res://assets/images/Firefly Forest Background Background color.png" id="1_stukw"]
+[ext_resource type="Script" uid="uid://cyitard5vr0jh" path="res://scripts/ParallaxBG.gd" id="2_2ttnm"]
+[ext_resource type="Texture2D" uid="uid://bbjl2a56e0c1h" path="res://assets/images/Firefly Forest Background Back tree.png" id="2_4ib1v"]
+[ext_resource type="Texture2D" uid="uid://p8ucx57ppg4n" path="res://assets/images/Firefly Forest Background Behind Second Layer.png" id="3_2ttnm"]
+[ext_resource type="Texture2D" uid="uid://cvqwuqx2dnypa" path="res://assets/images/Firefly Forest Background Second Layer.png" id="4_4ret6"]
+[ext_resource type="Texture2D" uid="uid://cv6ax7203hfys" path="res://assets/images/Firefly Forest Background Behind Front Layer.png" id="5_fwrf6"]
+[ext_resource type="Texture2D" uid="uid://dou6j2idh3mfj" path="res://assets/images/Firefly Forest Background Front Layer.png" id="6_5txi7"]
+
+[node name="Parallax BG" type="Node2D" unique_id=1010504771]
+
+[node name="Background_Color" type="Parallax2D" parent="." unique_id=278160433]
+z_index = -100
+scale = Vector2(0.5, 0.5)
+scroll_scale = Vector2(1, 0)
+repeat_size = Vector2(2000, 1000)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Background_Color" unique_id=955094073]
+scale = Vector2(4, 4)
+texture = ExtResource("1_stukw")
+
+[node name="Back_Tree" type="Parallax2D" parent="." unique_id=1481492822]
+z_index = -100
+scale = Vector2(0.5, 0.5)
+scroll_scale = Vector2(0.85, 0)
+repeat_size = Vector2(2000, 1000)
+repeat_times = 4
+script = ExtResource("2_2ttnm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Back_Tree" unique_id=577248174]
+scale = Vector2(4, 4)
+texture = ExtResource("2_4ib1v")
+
+[node name="Behind_Second_Layer" type="Parallax2D" parent="." unique_id=1310550928]
+z_index = -100
+scale = Vector2(0.5, 0.5)
+scroll_scale = Vector2(0.9, 0)
+repeat_size = Vector2(2000, 1000)
+repeat_times = 4
+script = ExtResource("2_2ttnm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Behind_Second_Layer" unique_id=766910236]
+scale = Vector2(4, 4)
+texture = ExtResource("3_2ttnm")
+
+[node name="Second_Layer" type="Parallax2D" parent="." unique_id=1426804957]
+z_index = -100
+scale = Vector2(0.5, 0.5)
+scroll_scale = Vector2(0.9, 0)
+repeat_size = Vector2(2000, 1000)
+repeat_times = 4
+script = ExtResource("2_2ttnm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Second_Layer" unique_id=1484965647]
+scale = Vector2(4, 4)
+texture = ExtResource("4_4ret6")
+
+[node name="Behind_Front_Layer" type="Parallax2D" parent="." unique_id=792774302]
+z_index = -100
+scale = Vector2(0.5, 0.5)
+scroll_scale = Vector2(0.95, 0)
+repeat_size = Vector2(2000, 1000)
+repeat_times = 4
+script = ExtResource("2_2ttnm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Behind_Front_Layer" unique_id=1585904881]
+scale = Vector2(4, 4)
+texture = ExtResource("5_fwrf6")
+
+[node name="Front_Layer" type="Parallax2D" parent="." unique_id=106290726]
+z_index = -100
+scale = Vector2(0.5, 0.5)
+scroll_scale = Vector2(0.98, 0)
+repeat_size = Vector2(2000, 1000)
+repeat_times = 4
+script = ExtResource("2_2ttnm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Front_Layer" unique_id=70097800]
+scale = Vector2(4, 4)
+texture = ExtResource("6_5txi7")

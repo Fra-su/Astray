@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/coin_popup.gd" id="1_popup"]
+[ext_resource type="Texture2D" uid="uid://bg2xo343ghw4j" path="res://assets/images/spritesheets/Cips and Relics/Cip-Sheet.png" id="2_cip"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_popup_icon"]
+atlas = ExtResource("2_cip")
+region = Rect2(0, 0, 8, 8)
+
+[node name="CoinPopup" type="CanvasLayer"]
+layer = 15
+script = ExtResource("1_popup")
+
+[node name="Icon" type="TextureRect" parent="."]
+offset_left = 20.0
+offset_top = 70.0
+offset_right = 52.0
+offset_bottom = 102.0
+texture = SubResource("AtlasTexture_popup_icon")
+expand_mode = 1
+stretch_mode = 5
+texture_filter = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 60.0
+offset_top = 70.0
+offset_right = 140.0
+offset_bottom = 102.0
+theme_override_font_sizes/font_size = 24
+vertical_alignment = 1
+text = "0"

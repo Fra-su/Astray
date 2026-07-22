@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dii0akogw0erq"]
+
+[ext_resource type="Script" uid="uid://d0oesjm8syl0r" path="res://scripts/hit_flash.gd" id="1_a2ovi"]
+
+[node name="HitFlash" type="Node2D" unique_id=1405195646]
+script = ExtResource("1_a2ovi")

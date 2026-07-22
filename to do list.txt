@@ -1,12 +1,8 @@
 To-do list
 --------------
 School
-- Get rid of 'monument'
 - Bigger map
-- Menu
 
 Home
-- Make static hurtboxes ignore i-frames
-- Death / take damage sequence
-- Add attacking
-- Loading 'levels'
+- Firefly particles
+- Menu

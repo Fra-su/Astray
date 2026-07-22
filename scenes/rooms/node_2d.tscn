@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://s73xgv0cnni"]
+
+[sub_resource type="GDScript" id="GDScript_jr7bs"]
+script/source = "extends Node2D
+class_name FireflySwarm
+
+## Drop this into a room scene (as a regular Node2D, NOT inside any CanvasLayer) to get
+## a small swarm of ambient wandering fireflies. Since it's plain world-space content with
+## a high z_index, it draws above normal sprites/tiles but still stays underneath any UI
+## CanvasLayer (transition fades, the Lore Statue's text, etc) automatically - Godot always
+## composites CanvasLayers above the base world regardless of z_index.
+
+@export var firefly_count := 8
+@export var spawn_bounds := Rect2(-200, -150, 400, 300) # relative to this node's own position
+@export var firefly_color := Color(0xFB / 255.0, 0xFF / 255.0, 0x00 / 255.0)
+@export var pixel_size := 4.0 # visible dot size in world units, matching your 4x pixel-art scale
+
+@export var move_speed_min := 15.0
+@export var move_speed_max := 35.0
+@export var retarget_interval_min := 1.5 # how often each firefly picks a new random destination
+@export var retarget_interval_max := 4.0
+
+@export var bob_amplitude := 3.0    # vertical drift layered on top of the wander movement
+@export var bob_frequency_min := 0.5
+@export var bob_frequency_max := 1.5
+
+@export var light_energy := 0.6
+@export var light_range := 48.0
+@export var flicker_amplitude := 0.25 # how much the light's energy varies, for a blinking feel
+
+@export var z_index_value := 50 # draws above normal world sprites/tiles
+
+func _ready() -> void:
+	for i in firefly_count:
+		_spawn_firefly()
+
+func _spawn_firefly() -> void:
+	var firefly := Firefly.new()
+	firefly.color = firefly_color
+	firefly.pixel_size = pixel_size
+	firefly.bounds = spawn_bounds
+	firefly.move_speed = randf_range(move_speed_min, move_speed_max)
+	firefly.retarget_interval_min = retarget_interval_min
+	firefly.retarget_interval_max = retarget_interval_max
+	firefly.bob_amplitude = bob_amplitude
+	firefly.bob_frequency = randf_range(bob_frequency_min, bob_frequency_max)
+	firefly.bob_phase = randf_range(0.0, TAU)
+	firefly.light_energy = light_energy
+	firefly.light_range = light_range
+	firefly.flicker_amplitude = flicker_amplitude
+	firefly.z_index = z_index_value
+	firefly.position = Vector2(
+		spawn_bounds.position.x + randf() * spawn_bounds.size.x,
+		spawn_bounds.position.y + randf() * spawn_bounds.size.y
+	)
+	add_child(firefly)
+
+## individual firefly agent - each one wanders independently with its own randomized
+## timing/phase, so the swarm never looks synchronized or \"patterny\"
+class Firefly extends Node2D:
+	var color: Color
+	var pixel_size: float
+	var bounds: Rect2
+	var move_speed: float
+	var retarget_interval_min: float
+	var retarget_interval_max: float
+	var bob_amplitude: float
+	var bob_frequency: float
+	var bob_phase: float
+	var light_energy: float
+	var light_range: float
+	var flicker_amplitude: float
+
+	var core_position: Vector2 # the actual wander position, separate from the visual bob offset
+	var target: Vector2
+	var retarget_timer := 0.0
+	var time_alive := 0.0
+	var light: PointLight2D
+
+	func _ready() -> void:
+		core_position = position
+		_pick_new_target()
+		_build_visuals()
+
+	func _build_visuals() -> void:
+		var gradient := Gradient.new()
+		gradient.set_color(0, Color(1, 1, 1, 1))
+		gradient.set_color(1, Color(1, 1, 1, 0))
+
+		var tex := GradientTexture2D.new()
+		tex.gradient = gradient
+		tex.fill = GradientTexture2D.FILL_RADIAL
+		tex.fill_from = Vector2(0.5, 0.5)
+		tex.fill_to = Vector2(1.0, 0.5)
+		tex.width = 16
+		tex.height = 16
+
+		var sprite := Sprite2D.new()
+		sprite.texture = tex
+		sprite.modulate = color
+		sprite.scale = Vector2.ONE * (pixel_size / 16.0)
+		add_child(sprite)
+
+		light = PointLight2D.new()
+		light.texture = tex
+		light.color = color
+		light.energy = light_energy
+		light.texture_scale = light_range / 16.0
+		add_child(light)
+
+	func _pick_new_target() -> void:
+		target = Vector2(
+			bounds.position.x + randf() * bounds.size.x,
+			bounds.position.y + randf() * bounds.size.y
+		)
+		retarget_timer = randf_range(retarget_interval_min, retarget_interval_max)
+
+	func _process(delta: float) -> void:
+		time_alive += delta
+		retarget_timer -= delta
+
+		if retarget_timer <= 0.0 or core_position.distance_to(target) < 4.0:
+			_pick_new_target()
+
+		var to_target := target - core_position
+		if to_target.length() > 0.1:
+			core_position += to_target.normalized() * move_speed * delta
+
+		# vertical bob layered on top of the wander movement, phase offset per instance
+		position = core_position + Vector2(0, sin(time_alive * bob_frequency + bob_phase) * bob_amplitude)
+
+		if light:
+			light.energy = light_energy + sin(time_alive * 3.0 + bob_phase) * flicker_amplitude
+"
+
+[node name="Firefly Particles" type="Node2D" unique_id=972544441]
+script = SubResource("GDScript_jr7bs")

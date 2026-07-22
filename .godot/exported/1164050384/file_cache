@@ -1,0 +1,99 @@
+res://assets/images/other/main.png::320acc7fc2ab294420c7ad3ae13f8bf80b161d9dfdee5966c3bddb81ec6ddc90::1775593338::
+res://assets/images/spritesheets/Cips and Relics/Cip-Sheet.png::8cc5d0a43dddc0fa40a9576590bef1c39bcfcd91878e9436567cc0fd8361ac16::1775593338::
+res://assets/images/spritesheets/Enemies/Angry Firefly.png::8747abb5dce4b44f987451c227b9580ba2c83390bb1bf1b95dabf5d88dc6742b::1783542176::
+res://assets/images/spritesheets/Enemies/Blue Firefly Glow.png::eaba5361eec154d71104fcf6c14f0447522289e0b0a23234af0c6d1dc6fd79a7::1775593338::
+res://assets/images/spritesheets/Enemies/Blue Firefly-Sheet.png::665bde925610c0f758f6422fd4c1f53c917624e86c8074715e1579be00ebf2f6::1775593338::
+res://assets/images/spritesheets/Enemies/Fireflies 2-Sheet.png::ec091936d1756a3ecb6e37f78696b4f5104e092c8d2d448cd0a3abe71dad7d8b::1775593338::
+res://assets/images/spritesheets/Enemies/Fireflies 3-Sheet.png::2eba995e96af3b8532eee799b4eecdbadff024ecdefb614ba70d0ecd4421e5bc::1775593338::
+res://assets/images/spritesheets/Enemies/Firefly Hive.png::d487c208ab7f7aa5176b8c71861548fb0da4e96e556f5c76293946c81c41e642::1783541461::
+res://assets/images/spritesheets/Enemies/Firefly Light.png::6141011b1eab19f61420a59a77d9044e09eeef88f126d66ee12832882249a801::1775593338::
+res://assets/images/spritesheets/Enemies/shade Idle-Sheet.png::7e310223904d31bf2c6f57ee73976ddc81044335b0de23477c516f3cbcd3ba8c::1775593338::
+res://assets/images/spritesheets/Enemies/Shade Running-Sheet.png::dc61da864178975a51b59a08b044e5544bf724cac6f14bf0987ee570b599b48c::1775593338::
+res://assets/images/spritesheets/Enemies/Shroomafly Die.png::c5b139e29ce6e1dc6fbaa2afb0c3c8353a4167da79bbd93991a8a2ef8089bc75::1783368184::
+res://assets/images/spritesheets/Enemies/Shroomafly Left-Sheet.png::142dd56d0c50db5cd75861a7db05036966ff66fe7b391e6039b0abceb663837d::1783324870::
+res://assets/images/spritesheets/Enemies/Shroomafly Right-Sheet.png::bc18b11eca05a333746cf9c40a14827d63320463c25f6a9eec87a7ac46ab36f9::1783324967::
+res://assets/images/spritesheets/Enemies/Shroomafly-Sheet.png::e468f8651acf803097fc65eaa93d8c43101220a8a347e6dae47c6549674b985b::1783300820::
+res://assets/images/spritesheets/Enemies/Shrub Death-Sheet.png::f97b2b10d1c955457e91cc03321d9321d898db06e0c9f210bf0d892e2520e761::1783150091::
+res://assets/images/spritesheets/Enemies/Shrub Turn-Sheet.png::5b17ee9f71cfe3427a51702684cc3d18673e1caf854bf3df0b4121dbb56ee202::1775593338::
+res://assets/images/spritesheets/Enemies/Shrub-Sheet.png::0cbcd7cccec195c941346cc319084e2d55c4f2d02ea7e13bc4664a5c64004209::1783150084::
+res://assets/images/spritesheets/other/energy bar/crystal.png::5aa4b98d513aeded592580e364f21c595e1329913531653b3d7e1d859b12dca8::1783388651::
+res://assets/images/spritesheets/other/energy bar/Energy bar back.png::3c2622eb5a153f424dcc57ef55cfb76b13b97b867245c5d831694b2d9165d14e::1783387871::
+res://assets/images/spritesheets/other/energy bar/Energy bar middle.png::83d34c9a45e2dc73f6886c505885a8ae592140f306116870dba892d474e2745c::1783387859::
+res://assets/images/spritesheets/other/energy bar/Energy bar top.png::3bb7751940da19927b6c45f9d66e58fa31d5ae0423aee3967acc9708f93a2a7b::1783387948::
+res://assets/images/spritesheets/other/HeartDie-Sheet.png::406929c1571b9c5f54e80299ca644033fcefcc13b3848c8a3a9230ff1b6878f1::1782764959::
+res://assets/images/spritesheets/other/Springshroom.png::52358d88ebb02b6753c016afcd6fc4b49d725195eabf31ae75c65a9e9c1cb6b6::1775593338::
+res://assets/images/spritesheets/player_cat/cat_silhouette-Sheet.png::4225c6a2b4711b045c2d2370f19c443af8105c9cc7805322d956a373e6b478a5::1782983477::
+res://assets/images/spritesheets/player_cat/climbing.png::53aeb1645c98628af6c8ba8554ca3f5ac9ac4828cdb06389ccee5dc27570cd46::1775593339::
+res://assets/images/spritesheets/player_cat/crouching_idle.png::be7ddd7fa5f659dfa8794e454ff37bdf75bb99114642ecb3d2e4a036a1856c60::1775593339::
+res://assets/images/spritesheets/player_cat/crouching_running.png::32ceb40be8a4961d35c1ed44540642d79d1215561d68bc9f094cbdc61b1a9faa::1782889150::
+res://assets/images/spritesheets/player_cat/Heal-Sheet.png::95033a0a846ba00842878fd5b26d7e51dae698c3f9737e4d6dbfa908d5d1630b::1783538995::
+res://assets/images/spritesheets/player_cat/Horizontal Attack-Sheet.png::b4caecaabfa9bd39087d4bbcc277ca13f8f539e78394c4e2cc30572b5300684a::1783110894::
+res://assets/images/spritesheets/player_cat/Hurt-Sheet.png::d36198ae3c0fd2473227236c57bbaeb56dd8d71436a73ac1fa5f26f7c36a4250::1783195637::
+res://assets/images/spritesheets/player_cat/ide_to_sit.png::aff61ae14f6b17064c25eba0563bbff703ea8ce833c5a9943101fe635e67f4e0::1775593339::
+res://assets/images/spritesheets/player_cat/idle.png::c7e93179f24369520548fa642c83e148c53ba3c360abe6de8ba0eef67ab6cdb9::1775593339::
+res://assets/images/spritesheets/player_cat/jumping.png::c03c3b58bc78b9a22888f39aefda76e9c83cdd466e12627162275e153176b483::1775593339::
+res://assets/images/spritesheets/player_cat/running.png::cd7b38e24fe929be325343a33c4485cc3e8dc48268c0e649b6449218ddf35689::1775593339::
+res://assets/images/spritesheets/player_cat/sitting.png::9b537a473b33e7fe8f437b96dc34dc6ea063cc1d4d9d545cafaf8b8814788903::1775593339::
+res://assets/images/spritesheets/player_cat/sleeping.png::e3939bdb44a19dcda3508f4b62f844ba72e9b17767d89ceb00685596a18068b9::1775593339::
+res://assets/images/spritesheets/player_cat/waking.png::9b4c7707597d4359d4dcf408b497984c0e98bc57f2a9c847bdb4c98081ddf2a3::1775593339::
+res://assets/images/structures/farm sign.png::e35750a27596ea99de28e606dad871da56d9f86f8f9cfda4db220b56b4e9e14c::1783062847::
+res://assets/images/structures/First Shrine.png::9c38f2112ec9f622855da971baba2bf551bf9fda2b63bd75882b7d0d69858ba9::1783562697::
+res://assets/images/structures/shop sign.png::6067b1c2c41aac3f0551828521392db9fa71049878acf13b39d1f758e18e2487::1783063925::
+res://assets/images/structures/Town House 1.png::6222866a648fbef12ed3c3cd81aeb62ae1c7d7fe3f6a5c5bbbbb08f15892a4c3::1775593338::
+res://assets/images/tilesets/Ancient Monument Details.png::74e4b1fd3b87f110f6d76a7fc5afc051568252afb9fc051c0e5999e637c3b68b::1775593339::
+res://assets/images/tilesets/Ancient Monument Tileset.png::d3c2e17d4542298ece264b119a1c51b1fe7d1a77510e3eaa74c958efaede8526::1775593339::
+res://assets/images/tilesets/collision.svg::7d6ecd97776ed0e2b383ac728d3e0b6887ad45d81bf1c0692dd40d0b3fb7c516::1775593339::
+res://assets/images/tilesets/Firefly Forest Background Details.png::ce39c057d87df0d4e97b1b84fd45fb05ae541f177d89a1e0f83f20325d2a807f::1783063277::
+res://assets/images/tilesets/Firefly Forest Background Tileset.png::07b102ce0497b9c8e491cafe9feab9b2aa32287a56eabad4803360d8fd606fe2::1775593339::
+res://assets/images/tilesets/Firefly Forest Hazard.png::ae10f88318506524f1db12d41518f71dc32984a1b330a662ee67b37c4e0ff767::1775593339::
+res://assets/images/tilesets/Firefly Forest Tileset Overlay.png::4d3162ae0f6e36cbcc474430079d7b5068d1832ba3f46d3017d2ff16b0bb9d2e::1775593339::
+res://assets/images/tilesets/testing_block.png::57a33178a06e6bb7296504963f1e7fd60e1e86ef04518e5d385c4e6f564203b8::1775593339::
+res://assets/images/Firefly Forest Background Back tree.png::fca75390941804e077748d51b57383d17582947491a29f1d2833cbf288b55232::1783065136::
+res://assets/images/Firefly Forest Background Background color.png::d176511396e42629c1fbabf685a989e3968726cbcd93666494415e78c4747c6a::1783065136::
+res://assets/images/Firefly Forest Background Behind Front Layer.png::358d1e1dec1792cd84f2b688c3f63beb350102db9a1452b12de80e7df0717995::1783065136::
+res://assets/images/Firefly Forest Background Behind Second Layer.png::167f00153c86d91503bdf0593e27b9b4cc6b3e4974f4d441829d324c510ab5e0::1783065136::
+res://assets/images/Firefly Forest Background Front Layer.png::135aa03b68088a76042ac7fbe5a79fa4114ff6e954f24fef5ffa0eb917d090ff::1783065136::
+res://assets/images/Firefly Forest Background Second Layer.png::93199d05f4fe7bd23d79f758fcf0add1a319c8ef0e21a9c2ced7701ac4986719::1783065136::
+res://assets/unused assets/Cat Climbing1.png::d79242eb3c4d78a14d9646edc03252ab07b875f77b9afcd7f67c92d7baeb448a::1775593340::
+res://assets/unused assets/Cat Climbing2.png::35f7618ba718bfd15cfa89500ecb2a3e949be76c3eb0ba1864482ca12dbc982e::1775593340::
+res://assets/unused assets/Cat Climbing3.png::a786c1b0b896f824ca1f1f1015b2e75f776b581ac280d7189122f9e56b6853e4::1775593340::
+res://assets/unused assets/Cat Climbing4.png::03c87703bdee6a0639d8f230068f3fa4e70181cdc6b60a4da3abfe134a065241::1775593340::
+res://assets/unused assets/character_body_2d.tscn::0d06d2a3eec5055816a5e2ea72a9214a::1775593340::res://.godot/exported/1164050384/export-8e0092b31bab85fb128f6fd850ccd0db-character_body_2d.scn
+res://assets/unused assets/node_2d.tscn::a8784467900c0f48c98f2d6673d03326::1775593340::res://.godot/exported/1164050384/export-4202dc878886484f06f08aa6c1b5d3b3-node_2d.scn
+res://assets/unused assets/Tiles and stuff.tscn::34a3199f23de2b2dc4953637ec640756::1775593340::res://.godot/exported/1164050384/export-e359d60ca84ceef9768374baf78b12fa-Tiles and stuff.scn
+res://scenes/enemies/angry_firefly.tscn::748c482fbf7559f0a768281f02195611::1783543925::res://.godot/exported/1164050384/export-acd523815408e0e448ec80b24f6010d2-angry_firefly.scn
+res://scenes/enemies/blue_fireflies.tscn::f017c17fae42c213e93bc9c25619fd09::1775593340::res://.godot/exported/1164050384/export-9579e20517c8e57558028ec03001e948-blue_fireflies.scn
+res://scenes/enemies/enemy_corpse.tscn::b0d21ea84f7174bc4fa151f2073e1b8b::1783324180::res://.godot/exported/1164050384/export-c4eedbf15df4c08fc4802d0389d32f06-enemy_corpse.scn
+res://scenes/enemies/fireflies.tscn::d99216768eddb7242526e7f989c4a953::1775593340::res://.godot/exported/1164050384/export-f8527c6b305a68a89f0ed6554273f22e-fireflies.scn
+res://scenes/enemies/Firefly Hive.png::d487c208ab7f7aa5176b8c71861548fb6cc217d603caad5b1609cc862faa555d::1783541451::
+res://scenes/enemies/firefly_hive.tscn::a4b3838185fd534f433f4e89a7cd8da7::1783544756::res://.godot/exported/1164050384/export-0b9e336fffb1121a0eba2327f857f191-firefly_hive.scn
+res://scenes/enemies/shade.tscn::8017cccc4320b3dffac7a07b5717d530::1775593340::res://.godot/exported/1164050384/export-cd07ae85a5f4a6836df88ff09a6b5961-shade.scn
+res://scenes/enemies/shroomafly.tscn::ac6a465526b95a63146ab2a94fcb7ce4::1783368531::res://.godot/exported/1164050384/export-201d0743860ba9cd54359be14ac4df1a-shroomafly.scn
+res://scenes/enemies/Shrub.tscn::c935d6d13e9f4c28c71cdb2830f793b7::1783324477::res://.godot/exported/1164050384/export-9b20705bd7b4e95162a95a70b93bc6e7-Shrub.scn
+res://scenes/rooms/curve_right_town.tscn::87ea81fce71767c9e657721ca628be97::1783540397::res://.godot/exported/1164050384/export-bd9fa1ae510014c7caa0fb640e1ba814-curve_right_town.scn
+res://scenes/rooms/first_shrine.tscn::d62db06af11df9ca20d3da48500c2a5e::1783566013::res://.godot/exported/1164050384/export-6b9a9355cc5b0402f10366e6ace69654-first_shrine.scn
+res://scenes/rooms/path_to_first_shrine.tscn::e313480dfaa24fc5e4ce1f959346e30b::1783549254::res://.godot/exported/1164050384/export-7c1c57f9d3e7e4bebe762934dd1b488f-path_to_first_shrine.scn
+res://scenes/rooms/room_base.tscn::29fc3b6196156f8f1a2b7e6009f7c250::1783130572::res://.godot/exported/1164050384/export-df0a0cea2d7503e4b29a2a9e713cfd23-room_base.scn
+res://scenes/rooms/splash_text.tscn::f946ca1f5082b7fe629d89f9f0f8aa09::1783562310::res://.godot/exported/1164050384/export-71a7059fb9ac042eca562971e323b3df-splash_text.scn
+res://scenes/rooms/town_room.tscn::6cefee0739d46bbe85c9c1b7902237df::1783392488::res://.godot/exported/1164050384/export-fc2b60f4397e415a4932cc826e4b1040-town_room.scn
+res://scenes/rooms/tutorial.tscn::6bb693c3f87dd84317c0e4568eebd51c::1783452815::res://.godot/exported/1164050384/export-854544f7370098f3c9276ed38001e552-tutorial.scn
+res://scenes/Background.tscn::fb7d771906ba6229430eb51858d3515a::1783108978::res://.godot/exported/1164050384/export-4913db11209a89d2c1e21ad0ff2e6654-Background.scn
+res://scenes/checkpoint.tscn::af5af34701b3d3605ecb245576301d17::1783065810::res://.godot/exported/1164050384/export-482b6a8501cb9cd5cb5e89d8c0a2c549-checkpoint.scn
+res://scenes/cip.tscn::e9f38e8aa07afb3326951cf96b38456f::1775593340::res://.godot/exported/1164050384/export-49201b6d40c288a4e9119fccfe9c26e0-cip.scn
+res://scenes/door.tscn::9f79dafe1effbc523e24d8d9a41b0b16::1783107516::res://.godot/exported/1164050384/export-3370694a3d56567dea5c3bf0058a536d-door.scn
+res://scenes/enemy_health.tscn::e612d9f518d4a0a1bfa369f696024fe3::1783111408::res://.godot/exported/1164050384/export-175f3e7b40f2e128246ce666c9905aae-enemy_health.scn
+res://scenes/energy_bar.tscn::c9937408c49385e305b6aa2617e7e4c2::1783562098::res://.godot/exported/1164050384/export-1ba52092ce68d57d1ea6b420cef6955c-energy_bar.scn
+res://scenes/firefly_particle.tscn::33de9ac47177fad5fb4281a569c9e481::1782866551::res://.godot/exported/1164050384/export-cd9eb01e531a40e49bc1c790988ac53e-firefly_particle.scn
+res://scenes/HazardDetector.tscn::d9a7459f233408ea15466848908207e3::1783148544::res://.godot/exported/1164050384/export-17f0d5f97388a3a679496c8a431b28c3-HazardDetector.scn
+res://scenes/healthUI.tscn::1b1728b0d130323dfe743ccebd74744d::1783370979::res://.godot/exported/1164050384/export-c8f6ddff564e9a2d6c1069e77764bad3-healthUI.scn
+res://scenes/hit_flash.tscn::c8c9443756c202adc02254bdcc810046::1783130838::res://.godot/exported/1164050384/export-62fa7885bc11ca11641ddceadac79a10-hit_flash.scn
+res://scenes/individual_heart.tscn::ce8f528d5327f43809ec7ddd222d4d92::1783065795::res://.godot/exported/1164050384/export-3a50fceade6b6633af2478156c978803-individual_heart.scn
+res://scenes/player.tscn::903fb34801111a0d45bb3b83c44ce66c::1783560090::res://.godot/exported/1164050384/export-234fb6894ec6226e856ab7f825500d3d-player.scn
+res://scenes/read_text.tscn::4de58714d93acf8e9a77406f420b9b7e::1783565679::res://.godot/exported/1164050384/export-8d2ce2f7d5cfed2793bd51a39cec412d-read_text.scn
+res://scenes/springshroom.tscn::0ee7598e41b32e884ea1ef71a44bd429::1775593340::res://.godot/exported/1164050384/export-7061e6bc9dd565cf8b95653caab69242-springshroom.scn
+res://scenes/Town.tscn::9a5d626a4e8ea954130d76864c15ec5b::1783062842::res://.godot/exported/1164050384/export-fbb2f0934db805a35fb1dc2ae4d0102b-Town.scn
+res://scenes/transition.tscn::4ac4964c927448d0187f1ac709fcaca0::1782983606::res://.godot/exported/1164050384/export-c5d0fcfa37b41758e77048240f661414-transition.scn
+res://shaders/energy_bar.gdshader::8972d6070ebe4df14dd0b65c4cef9d98::1783548642::
+res://shaders/game.gdshader::e0a80e9b9fda7aa53614be7933ab2af3::1783548642::
+res://shaders/hit_flash.gdshader::535c7798ff6dae56f92c67302d34534d::1783548642::
+res://tutorial_text.tscn::d9f9b931eda2fec026b7a35adcb44ac6::1782884274::res://.godot/exported/1164050384/export-e6bc42ee235967276ae2e7c97bb64f9f-tutorial_text.scn

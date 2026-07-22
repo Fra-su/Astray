@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cvgmjhreqt8s6"]
+
+[ext_resource type="Script" uid="uid://cb4htk8pcm10b" path="res://scripts/gate.gd" id="1_w4kw2"]
+[ext_resource type="Texture2D" uid="uid://p3t56jj4dums" path="res://assets/images/spritesheets/other/Locked Gate.png" id="2_ji4kr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ce6sv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ji4kr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4kw2"]
+size = Vector2(6, 24)
+
+[node name="Gate" type="StaticBody2D" unique_id=1423069034]
+scale = Vector2(4, 4)
+collision_mask = 0
+script = ExtResource("1_w4kw2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=244187919]
+sprite_frames = SubResource("SpriteFrames_ce6sv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=865731425]
+shape = SubResource("RectangleShape2D_w4kw2")

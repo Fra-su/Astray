@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://u1a1r24qqivw"]
+
+[ext_resource type="Script" uid="uid://b7pcokhamn7w4" path="res://scripts/issac_mewton.gd" id="1_x2swm"]
+[ext_resource type="Texture2D" uid="uid://di0qt32f5gm13" path="res://assets/images/spritesheets/Issac Mewton/Wizard_Idle-Sheet.png" id="2_nxagf"]
+[ext_resource type="Texture2D" uid="uid://bl6nfsykbcq3i" path="res://assets/images/spritesheets/Issac Mewton/Wizard_Walk-Sheet.png" id="3_iund5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mewton_body"]
+size = Vector2(16, 14.75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxagf"]
+atlas = ExtResource("2_nxagf")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iund5"]
+atlas = ExtResource("2_nxagf")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nv5px"]
+atlas = ExtResource("2_nxagf")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fc1ch"]
+atlas = ExtResource("2_nxagf")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i57jx"]
+atlas = ExtResource("3_iund5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwdl6"]
+atlas = ExtResource("3_iund5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjpib"]
+atlas = ExtResource("3_iund5")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yoa5m"]
+atlas = ExtResource("3_iund5")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3b40i"]
+atlas = ExtResource("3_iund5")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pjmpl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxagf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iund5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nv5px")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fc1ch")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i57jx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwdl6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjpib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yoa5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3b40i")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mewton_trigger"]
+radius = 24.0
+
+[node name="IssacMewton" type="CharacterBody2D" unique_id=1136487455]
+scale = Vector2(4, 4)
+collision_layer = 32
+script = ExtResource("1_x2swm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1938461238]
+position = Vector2(0, 8.625)
+shape = SubResource("RectangleShape2D_mewton_body")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=74935873]
+sprite_frames = SubResource("SpriteFrames_pjmpl")
+animation = &"walk"
+
+[node name="ShopTrigger" type="Area2D" parent="." unique_id=763588242]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShopTrigger" unique_id=809282310]
+shape = SubResource("CircleShape2D_mewton_trigger")
+
+[node name="NpcUI" type="CanvasLayer" parent="." unique_id=1858174295]
+layer = 20
+
+[node name="TalkPrompt" type="Label" parent="NpcUI" unique_id=682991899]
+offset_left = -30.0
+offset_top = -10.0
+offset_right = 30.0
+offset_bottom = 10.0
+theme_override_font_sizes/font_size = 32
+text = "Talk"
+horizontal_alignment = 1

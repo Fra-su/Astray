@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://in0yxoncq5q7"]
+
+[ext_resource type="Script" uid="uid://by14y2a1u1ro0" path="res://scripts/prompt_door.gd" id="1_5x1jt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pdoor"]
+size = Vector2(164, 178)
+
+[node name="PromptDoor" type="Area2D" unique_id=1802253819]
+collision_mask = 2
+script = ExtResource("1_5x1jt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=702999289]
+shape = SubResource("RectangleShape2D_pdoor")
+
+[node name="DoorUI" type="CanvasLayer" parent="." unique_id=159537317]
+layer = 20
+
+[node name="EnterPrompt" type="Label" parent="DoorUI" unique_id=2131583877]
+offset_left = -30.0
+offset_top = -10.0
+offset_right = 30.0
+offset_bottom = 10.0
+theme_override_font_sizes/font_size = 32
+text = "Enter"
+horizontal_alignment = 1

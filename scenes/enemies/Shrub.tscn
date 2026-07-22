@@ -1,0 +1,158 @@
+[gd_scene format=3 uid="uid://bgs83f6154ahs"]
+
+[ext_resource type="Texture2D" uid="uid://dv6xufm5tneqn" path="res://assets/images/spritesheets/Enemies/Shrub-Sheet.png" id="1_px0su"]
+[ext_resource type="Script" uid="uid://cprnxvpsfh8ub" path="res://scripts/enemy scripts/shrub.gd" id="1_skkrm"]
+[ext_resource type="Shader" uid="uid://bfx26mngmldvn" path="res://shaders/hit_flash.gdshader" id="2_1okya"]
+[ext_resource type="Texture2D" uid="uid://3as25fxxm7cb" path="res://assets/images/spritesheets/Enemies/Shrub Turn-Sheet.png" id="3_daj1n"]
+[ext_resource type="Texture2D" uid="uid://de7jji8jd2sn1" path="res://assets/images/spritesheets/Enemies/Shrub Death-Sheet.png" id="4_mi4mm"]
+[ext_resource type="PackedScene" uid="uid://qkqya8y2k2kn" path="res://scenes/enemy_health.tscn" id="4_xbgtm"]
+[ext_resource type="PackedScene" uid="uid://dii0akogw0erq" path="res://scenes/hit_flash.tscn" id="5_aupt3"]
+[ext_resource type="PackedScene" uid="uid://du8wfam4xyo06" path="res://scenes/HazardDetector.tscn" id="7_hw3ng"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hw3ng"]
+shader = ExtResource("2_1okya")
+shader_parameter/flash_color = Color(0, 0.784, 0.875, 1)
+shader_parameter/flash_amount = 0.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ciasn"]
+atlas = ExtResource("1_px0su")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mk0eb"]
+atlas = ExtResource("1_px0su")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmtqt"]
+atlas = ExtResource("1_px0su")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fua44"]
+atlas = ExtResource("1_px0su")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1kct"]
+atlas = ExtResource("1_px0su")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wq6xn"]
+atlas = ExtResource("1_px0su")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exx35"]
+atlas = ExtResource("4_mi4mm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fov8h"]
+atlas = ExtResource("4_mi4mm")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbvse"]
+atlas = ExtResource("4_mi4mm")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugybi"]
+atlas = ExtResource("4_mi4mm")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbgtm"]
+atlas = ExtResource("3_daj1n")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6gnl2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ciasn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mk0eb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lmtqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fua44")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1kct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wq6xn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exx35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fov8h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbvse")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugybi")
+}],
+"loop": false,
+"name": &"die",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbgtm")
+}],
+"loop": true,
+"name": &"shrub turn",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbgtm"]
+size = Vector2(48, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_daj1n"]
+size = Vector2(56, 52)
+
+[node name="Shrub" type="CharacterBody2D" unique_id=971201198]
+collision_layer = 8
+script = ExtResource("1_skkrm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=368060803]
+material = SubResource("ShaderMaterial_hw3ng")
+position = Vector2(0, -9)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_6gnl2")
+animation = &"die"
+frame = 3
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=875607135]
+position = Vector2(0, 31)
+shape = SubResource("RectangleShape2D_xbgtm")
+
+[node name="Wall Check" type="RayCast2D" parent="." unique_id=1623874553]
+position = Vector2(-2, 30)
+target_position = Vector2(34, 0)
+
+[node name="Floor Check" type="RayCast2D" parent="." unique_id=1384790236]
+position = Vector2(28, 29)
+target_position = Vector2(0, 32)
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1127310275]
+collision_layer = 32
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=2109886926]
+position = Vector2(0, 29)
+shape = SubResource("RectangleShape2D_daj1n")
+
+[node name="Enemy_Health" parent="." unique_id=26889117 instance=ExtResource("4_xbgtm")]
+max_health = 300
+
+[node name="HitFlash" parent="." unique_id=1405195646 instance=ExtResource("5_aupt3")]
+
+[node name="HazardDetector" parent="." unique_id=1743736976 instance=ExtResource("7_hw3ng")]
+position = Vector2(0, 29.000002)
+scale = Vector2(1.15, 0.95)

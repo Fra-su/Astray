@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://cncojspr8cyhd"]
 
 [ext_resource type="PackedScene" uid="uid://c8wxotu6hnask" path="res://scenes/individual_heart.tscn" id="1_6ods4"]
-[ext_resource type="Script" uid="uid://cvvfrxsylrpr1" path="res://scenes/health_ui.gd" id="1_k1x1j"]
+[ext_resource type="Script" uid="uid://cvvfrxsylrpr1" path="res://health_ui.gd" id="1_k1x1j"]
+[ext_resource type="PackedScene" uid="uid://dawscuo0dggyc" path="res://scenes/energy_bar.tscn" id="3_tmgmc"]
+[ext_resource type="PackedScene" uid="uid://bnfnk3ietuggi" path="res://scenes/ui/coin_popup.tscn" id="4_m8xip"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6ods4"]
 light_mode = 1
@@ -27,3 +29,12 @@ position = Vector2(75, 0)
 [node name="Heart 5" parent="." unique_id=859775557 instance=ExtResource("1_6ods4")]
 material = SubResource("CanvasItemMaterial_k1x1j")
 position = Vector2(100, 0)
+
+[node name="EnergyBar" parent="." unique_id=357589375 instance=ExtResource("3_tmgmc")]
+position = Vector2(52, 24)
+scale = Vector2(2, 2)
+
+[node name="CoinPopup" parent="." unique_id=584917547 instance=ExtResource("4_m8xip")]
+offset = Vector2(-5, 80)
+scale = Vector2(1.5, 1.5)
+transform = Transform2D(1.5, 0, 0, 1.5, -5, 80)

@@ -1,0 +1,183 @@
+[gd_scene format=3 uid="uid://cobcb5aykk4du"]
+
+[ext_resource type="Script" uid="uid://bu7lpe6ol3u00" path="res://shroomafly.gd" id="1_px06j"]
+[ext_resource type="Shader" uid="uid://bfx26mngmldvn" path="res://shaders/hit_flash.gdshader" id="2_ejr20"]
+[ext_resource type="Texture2D" uid="uid://bohoo0vek7e0s" path="res://assets/images/spritesheets/Enemies/Shroomafly-Sheet.png" id="2_lmsve"]
+[ext_resource type="PackedScene" uid="uid://qkqya8y2k2kn" path="res://scenes/enemy_health.tscn" id="2_rf2j0"]
+[ext_resource type="Texture2D" uid="uid://bpgg2jh0g6cfh" path="res://assets/images/spritesheets/Enemies/Shroomafly Left-Sheet.png" id="3_jqwf1"]
+[ext_resource type="PackedScene" uid="uid://dii0akogw0erq" path="res://scenes/hit_flash.tscn" id="3_lmsve"]
+[ext_resource type="Texture2D" uid="uid://dv2xls3e0n3f8" path="res://assets/images/spritesheets/Enemies/Shroomafly Die.png" id="3_sf8pd"]
+[ext_resource type="PackedScene" uid="uid://du8wfam4xyo06" path="res://scenes/HazardDetector.tscn" id="4_jqwf1"]
+[ext_resource type="Texture2D" uid="uid://ddwy2rngwpa28" path="res://assets/images/spritesheets/Enemies/Shroomafly Right-Sheet.png" id="4_sf8pd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5rc3g"]
+shader = ExtResource("2_ejr20")
+shader_parameter/flash_color = Color(0, 0.784, 0.875, 1)
+shader_parameter/flash_amount = 0.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqwf1"]
+atlas = ExtResource("2_lmsve")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sf8pd"]
+atlas = ExtResource("2_lmsve")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejr20"]
+atlas = ExtResource("2_lmsve")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rc3g"]
+atlas = ExtResource("2_lmsve")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykkck"]
+atlas = ExtResource("2_lmsve")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lylun"]
+atlas = ExtResource("3_jqwf1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f88vd"]
+atlas = ExtResource("3_jqwf1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1xfi"]
+atlas = ExtResource("3_jqwf1")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m88yi"]
+atlas = ExtResource("3_jqwf1")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vb41n"]
+atlas = ExtResource("3_jqwf1")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7nri"]
+atlas = ExtResource("4_sf8pd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vciyp"]
+atlas = ExtResource("4_sf8pd")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqxaj"]
+atlas = ExtResource("4_sf8pd")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61hrd"]
+atlas = ExtResource("4_sf8pd")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ie6n2"]
+atlas = ExtResource("4_sf8pd")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lylun"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqwf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sf8pd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejr20")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rc3g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ykkck")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_sf8pd")
+}],
+"loop": true,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lylun")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f88vd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1xfi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m88yi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vb41n")
+}],
+"loop": true,
+"name": &"left",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7nri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vciyp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqxaj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61hrd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ie6n2")
+}],
+"loop": true,
+"name": &"right",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f88vd"]
+size = Vector2(44, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1xfi"]
+size = Vector2(48, 44)
+
+[node name="Shroomafly" type="CharacterBody2D" unique_id=1987534535]
+collision_layer = 8
+script = ExtResource("1_px06j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2054441086]
+material = SubResource("ShaderMaterial_5rc3g")
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_lylun")
+animation = &"die"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2005236162]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_f88vd")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1746397711]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1661788030]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_e1xfi")
+
+[node name="Enemy_Health" parent="." unique_id=26889117 instance=ExtResource("2_rf2j0")]
+max_health = 7
+
+[node name="HitFlash" parent="." unique_id=1405195646 instance=ExtResource("3_lmsve")]
+
+[node name="HazardDetector" parent="." unique_id=1743736976 instance=ExtResource("4_jqwf1")]
+scale = Vector2(1, 0.8)

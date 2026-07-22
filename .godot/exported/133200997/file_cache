@@ -1,9 +1,35 @@
-res://assets/unused assets/character_body_2d.tscn::2ee4001a1ac2271cd56720efaeb8ae32::1774415360::res://.godot/exported/133200997/export-8e0092b31bab85fb128f6fd850ccd0db-character_body_2d.scn
-res://assets/unused assets/node_2d.tscn::9caafd88ce4576ef2504cc30e3ffdf4b::1774415360::res://.godot/exported/133200997/export-4202dc878886484f06f08aa6c1b5d3b3-node_2d.scn
-res://assets/unused assets/Tiles and stuff.tscn::860b7411d3fc7e218542567d710579ad::1774415360::res://.godot/exported/133200997/export-e359d60ca84ceef9768374baf78b12fa-Tiles and stuff.scn
-res://scenes/blue_fireflies.tscn::66508372e786755593016fb4cde2e2bf::1774495729::res://.godot/exported/133200997/export-29daee333a806c3e5f3554447ac344bf-blue_fireflies.scn
-res://scenes/cip.tscn::e9f38e8aa07afb3326951cf96b38456f::1774564889::res://.godot/exported/133200997/export-49201b6d40c288a4e9119fccfe9c26e0-cip.scn
-res://scenes/fireflies.tscn::fb9047beee035aafd62c10a1260053a6::1774495729::res://.godot/exported/133200997/export-aafba3cfbbe9dc691ad804835ddc7f61-fireflies.scn
-res://scenes/game.tscn::74ad7523d4513dd18f719ac18573ec08::1774495729::res://.godot/exported/133200997/export-c2a7af834e91ff64325daddf58e45dc0-game.scn
-res://scenes/player.tscn::90111a9a976dbe2fe336c53793867c6b::1774566401::res://.godot/exported/133200997/export-234fb6894ec6226e856ab7f825500d3d-player.scn
-res://scenes/shade.tscn::5c027209b84cf27b4d1ee6452f464638::1774495729::res://.godot/exported/133200997/export-e7ce1f1dddbc28a43506a66b86e0b915-shade.scn
+res://assets/unused assets/character_body_2d.tscn::0d06d2a3eec5055816a5e2ea72a9214a::1775593340::res://.godot/exported/133200997/export-8e0092b31bab85fb128f6fd850ccd0db-character_body_2d.scn
+res://assets/unused assets/node_2d.tscn::a8784467900c0f48c98f2d6673d03326::1775593340::res://.godot/exported/133200997/export-4202dc878886484f06f08aa6c1b5d3b3-node_2d.scn
+res://assets/unused assets/Tiles and stuff.tscn::34a3199f23de2b2dc4953637ec640756::1775593340::res://.godot/exported/133200997/export-e359d60ca84ceef9768374baf78b12fa-Tiles and stuff.scn
+res://scenes/cip.tscn::e9f38e8aa07afb3326951cf96b38456f::1775593340::res://.godot/exported/133200997/export-49201b6d40c288a4e9119fccfe9c26e0-cip.scn
+res://scenes/player.tscn::903fb34801111a0d45bb3b83c44ce66c::1783560090::res://.godot/exported/133200997/export-234fb6894ec6226e856ab7f825500d3d-player.scn
+res://scenes/enemies/angry_firefly.tscn::748c482fbf7559f0a768281f02195611::1783543925::res://.godot/exported/133200997/export-acd523815408e0e448ec80b24f6010d2-angry_firefly.scn
+res://scenes/enemies/blue_fireflies.tscn::f017c17fae42c213e93bc9c25619fd09::1775593340::res://.godot/exported/133200997/export-9579e20517c8e57558028ec03001e948-blue_fireflies.scn
+res://scenes/enemies/enemy_corpse.tscn::b0d21ea84f7174bc4fa151f2073e1b8b::1783324180::res://.godot/exported/133200997/export-c4eedbf15df4c08fc4802d0389d32f06-enemy_corpse.scn
+res://scenes/enemies/fireflies.tscn::d99216768eddb7242526e7f989c4a953::1775593340::res://.godot/exported/133200997/export-f8527c6b305a68a89f0ed6554273f22e-fireflies.scn
+res://scenes/enemies/firefly_hive.tscn::a4b3838185fd534f433f4e89a7cd8da7::1783544756::res://.godot/exported/133200997/export-0b9e336fffb1121a0eba2327f857f191-firefly_hive.scn
+res://scenes/enemies/shade.tscn::8017cccc4320b3dffac7a07b5717d530::1775593340::res://.godot/exported/133200997/export-cd07ae85a5f4a6836df88ff09a6b5961-shade.scn
+res://scenes/enemies/shroomafly.tscn::ac6a465526b95a63146ab2a94fcb7ce4::1783368531::res://.godot/exported/133200997/export-201d0743860ba9cd54359be14ac4df1a-shroomafly.scn
+res://scenes/enemies/Shrub.tscn::c935d6d13e9f4c28c71cdb2830f793b7::1783324477::res://.godot/exported/133200997/export-9b20705bd7b4e95162a95a70b93bc6e7-Shrub.scn
+res://scenes/rooms/curve_right_town.tscn::87ea81fce71767c9e657721ca628be97::1783540397::res://.godot/exported/133200997/export-bd9fa1ae510014c7caa0fb640e1ba814-curve_right_town.scn
+res://scenes/rooms/first_shrine.tscn::d62db06af11df9ca20d3da48500c2a5e::1783566013::res://.godot/exported/133200997/export-6b9a9355cc5b0402f10366e6ace69654-first_shrine.scn
+res://scenes/rooms/path_to_first_shrine.tscn::e313480dfaa24fc5e4ce1f959346e30b::1783549254::res://.godot/exported/133200997/export-7c1c57f9d3e7e4bebe762934dd1b488f-path_to_first_shrine.scn
+res://scenes/rooms/room_base.tscn::29fc3b6196156f8f1a2b7e6009f7c250::1783130572::res://.godot/exported/133200997/export-df0a0cea2d7503e4b29a2a9e713cfd23-room_base.scn
+res://scenes/rooms/splash_text.tscn::f946ca1f5082b7fe629d89f9f0f8aa09::1783562310::res://.godot/exported/133200997/export-71a7059fb9ac042eca562971e323b3df-splash_text.scn
+res://scenes/rooms/town_room.tscn::6cefee0739d46bbe85c9c1b7902237df::1783392488::res://.godot/exported/133200997/export-fc2b60f4397e415a4932cc826e4b1040-town_room.scn
+res://scenes/rooms/tutorial.tscn::6bb693c3f87dd84317c0e4568eebd51c::1783452815::res://.godot/exported/133200997/export-854544f7370098f3c9276ed38001e552-tutorial.scn
+res://scenes/Background.tscn::fb7d771906ba6229430eb51858d3515a::1783108978::res://.godot/exported/133200997/export-4913db11209a89d2c1e21ad0ff2e6654-Background.scn
+res://scenes/checkpoint.tscn::af5af34701b3d3605ecb245576301d17::1783065810::res://.godot/exported/133200997/export-482b6a8501cb9cd5cb5e89d8c0a2c549-checkpoint.scn
+res://scenes/door.tscn::9f79dafe1effbc523e24d8d9a41b0b16::1783107516::res://.godot/exported/133200997/export-3370694a3d56567dea5c3bf0058a536d-door.scn
+res://scenes/enemy_health.tscn::e612d9f518d4a0a1bfa369f696024fe3::1783111408::res://.godot/exported/133200997/export-175f3e7b40f2e128246ce666c9905aae-enemy_health.scn
+res://scenes/energy_bar.tscn::c9937408c49385e305b6aa2617e7e4c2::1783562098::res://.godot/exported/133200997/export-1ba52092ce68d57d1ea6b420cef6955c-energy_bar.scn
+res://scenes/firefly_particle.tscn::33de9ac47177fad5fb4281a569c9e481::1782866551::res://.godot/exported/133200997/export-cd9eb01e531a40e49bc1c790988ac53e-firefly_particle.scn
+res://scenes/HazardDetector.tscn::d9a7459f233408ea15466848908207e3::1783148544::res://.godot/exported/133200997/export-17f0d5f97388a3a679496c8a431b28c3-HazardDetector.scn
+res://scenes/healthUI.tscn::1b1728b0d130323dfe743ccebd74744d::1783370979::res://.godot/exported/133200997/export-c8f6ddff564e9a2d6c1069e77764bad3-healthUI.scn
+res://scenes/hit_flash.tscn::c8c9443756c202adc02254bdcc810046::1783130838::res://.godot/exported/133200997/export-62fa7885bc11ca11641ddceadac79a10-hit_flash.scn
+res://scenes/individual_heart.tscn::ce8f528d5327f43809ec7ddd222d4d92::1783065795::res://.godot/exported/133200997/export-3a50fceade6b6633af2478156c978803-individual_heart.scn
+res://scenes/read_text.tscn::4de58714d93acf8e9a77406f420b9b7e::1783565679::res://.godot/exported/133200997/export-8d2ce2f7d5cfed2793bd51a39cec412d-read_text.scn
+res://scenes/springshroom.tscn::0ee7598e41b32e884ea1ef71a44bd429::1775593340::res://.godot/exported/133200997/export-7061e6bc9dd565cf8b95653caab69242-springshroom.scn
+res://scenes/Town.tscn::9a5d626a4e8ea954130d76864c15ec5b::1783062842::res://.godot/exported/133200997/export-fbb2f0934db805a35fb1dc2ae4d0102b-Town.scn
+res://scenes/transition.tscn::4ac4964c927448d0187f1ac709fcaca0::1782983606::res://.godot/exported/133200997/export-c5d0fcfa37b41758e77048240f661414-transition.scn
+res://tutorial_text.tscn::d9f9b931eda2fec026b7a35adcb44ac6::1782884274::res://.godot/exported/133200997/export-e6bc42ee235967276ae2e7c97bb64f9f-tutorial_text.scn

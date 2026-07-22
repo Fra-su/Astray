@@ -54,6 +54,9 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_jiyim"]
+radius = 4.25
+
 [node name="Cip" type="Node2D" unique_id=2063378718]
 texture_filter = 1
 scale = Vector2(4, 4)
@@ -67,3 +70,10 @@ frame_progress = 0.82930315
 color = Color(1, 1, 0.79607844, 1)
 texture = ExtResource("2_23jad")
 texture_scale = 0.4
+
+[node name="PickupArea" type="Area2D" parent="." unique_id=1116986417]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" unique_id=2074597430]
+shape = SubResource("CircleShape2D_jiyim")

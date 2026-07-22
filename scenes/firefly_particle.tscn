@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://d3sterwg73hyj"]
+
+[ext_resource type="Script" uid="uid://45bwora5br3f" path="res://scripts/firefly_particles.gd" id="1_smnb2"]
+
+[node name="Firefly_Spawner" type="GPUParticles2D" unique_id=775129901]
+script = ExtResource("1_smnb2")

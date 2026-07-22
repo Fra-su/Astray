@@ -1,9 +1,0 @@
-res://scenes/transition.tscn
-res://scenes/game.gdshader
-res://scripts/transition.gd
-res://scenes/rooms/town_room.tscn
-res://door.gd
-res://scripts/game_state.gd
-res://scripts/player.gd
-res://scenes/rooms/tutorial.tscn
-res://scenes/rooms/room_base.tscn

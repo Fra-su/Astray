@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dm7uuxfmexs4u"]
+
+[ext_resource type="Script" uid="uid://cjw1ah4opdtlr" path="res://scripts/splash_text.gd" id="1_f5jpu"]
+
+[node name="ShrineText" type="CanvasLayer" unique_id=408853990]
+layer = 5
+script = ExtResource("1_f5jpu")
+display_text = "First Shrine"
+font_size = 70
+min_start_delay = 3.0
+max_start_delay = 3.0
+
+[node name="Label" type="Label" parent="." unique_id=2093352446]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -64.0
+offset_right = 400.0
+offset_bottom = -24.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 70
+text = "The First Shrine"

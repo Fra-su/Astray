@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://bcip0t57vwv2j"]
+
+[ext_resource type="PackedScene" uid="uid://h2sstv4i0lsh" path="res://scenes/menu/hotkey_rebind_button.tscn" id="1_dy25s"]
+[ext_resource type="Script" uid="uid://dqc82ctxkc4y" path="res://scripts/menu scripts/settings_tab_container.gd" id="2_settings"]
+
+[node name="Settings_Tab_Container" type="Control" unique_id=944913124]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_settings")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=831574777]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer" unique_id=1978480125]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer" unique_id=1934857406]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1687842399]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=656227889]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Keyboard"
+horizontal_alignment = 1
+
+[node name="Hotkey_Rebind_Button" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1172131084 instance=ExtResource("1_dy25s")]
+layout_mode = 2
+
+[node name="Hotkey_Rebind_Button2" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1490517596 instance=ExtResource("1_dy25s")]
+layout_mode = 2
+action_name = "right"
+
+[node name="Hotkey_Rebind_Button7" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=348952604 instance=ExtResource("1_dy25s")]
+layout_mode = 2
+action_name = "down"
+
+[node name="Hotkey_Rebind_Button3" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=65213376 instance=ExtResource("1_dy25s")]
+layout_mode = 2
+action_name = "jump"
+
+[node name="Hotkey_Rebind_Button4" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=2069447950 instance=ExtResource("1_dy25s")]
+layout_mode = 2
+action_name = "attack"
+
+[node name="Hotkey_Rebind_Button5" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=429616097 instance=ExtResource("1_dy25s")]
+layout_mode = 2
+action_name = "heal"
+
+[node name="Hotkey_Rebind_Button6" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=76871668 instance=ExtResource("1_dy25s")]
+layout_mode = 2
+action_name = "skill"
+
+[node name="Label2" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1683168913]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Controller"
+horizontal_alignment = 1
+
+[node name="Hotkey_Rebind_Button8" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1596658130 instance=ExtResource("1_dy25s")]
+layout_mode = 2
+action_name = "con_jump"
+
+[node name="Hotkey_Rebind_Button9" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1558945860 instance=ExtResource("1_dy25s")]
+layout_mode = 2
+action_name = "con_attack"
+
+[node name="Hotkey_Rebind_Button10" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1187149757 instance=ExtResource("1_dy25s")]
+layout_mode = 2
+action_name = "con_heal"
+
+[node name="Hotkey_Rebind_Button11" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1236204709 instance=ExtResource("1_dy25s")]
+layout_mode = 2
+action_name = "con_skill"
+
+[node name="Label3" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1683168914]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Display"
+horizontal_alignment = 1
+
+[node name="WindowModeOption" type="OptionButton" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1683168915]
+custom_minimum_size = Vector2(300, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label4" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1683168916]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Audio"
+horizontal_alignment = 1
+
+[node name="MasterRow" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1683168917]
+layout_mode = 2
+alignment = 1
+
+[node name="MasterLabel" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/MasterRow" unique_id=1683168918]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Master"
+
+[node name="MasterSlider" type="HSlider" parent="MarginContainer/ScrollContainer/VBoxContainer/MasterRow" unique_id=1683168919]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+
+[node name="SfxRow" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1683168920]
+layout_mode = 2
+alignment = 1
+
+[node name="SfxLabel" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/SfxRow" unique_id=1683168921]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "SFX"
+
+[node name="SfxSlider" type="HSlider" parent="MarginContainer/ScrollContainer/VBoxContainer/SfxRow" unique_id=1683168922]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+
+[node name="MusicRow" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1683168923]
+layout_mode = 2
+alignment = 1
+
+[node name="MusicLabel" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/MusicRow" unique_id=1683168924]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="MarginContainer/ScrollContainer/VBoxContainer/MusicRow" unique_id=1683168925]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=560568031]
+layout_mode = 2
+theme_override_constants/separation = 12

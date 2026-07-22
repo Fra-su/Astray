@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://dhc7ggyn07qpf"]
+
+[ext_resource type="Script" uid="uid://bu7lpe6ol3u00" path="res://shroomafly.gd" id="1_drlwf"]
+[ext_resource type="Texture2D" uid="uid://dfdjxq8edsu1u" path="res://assets/images/spritesheets/Enemies/Angry Firefly.png" id="2_n1ng7"]
+[ext_resource type="PackedScene" uid="uid://qkqya8y2k2kn" path="res://scenes/enemy_health.tscn" id="2_nqpm4"]
+[ext_resource type="PackedScene" uid="uid://dii0akogw0erq" path="res://scenes/hit_flash.tscn" id="3_n1ng7"]
+[ext_resource type="PackedScene" uid="uid://du8wfam4xyo06" path="res://scenes/HazardDetector.tscn" id="4_6u6vj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_drlwf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_n1ng7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_n1ng7")
+}],
+"loop": true,
+"name": &"die",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f88vd"]
+size = Vector2(3, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1xfi"]
+size = Vector2(48, 44)
+
+[node name="Angry Firefly" type="CharacterBody2D" unique_id=1987534535]
+collision_layer = 8
+script = ExtResource("1_drlwf")
+max_health = 2
+chase_speed = 320.0
+chase_deceleration = 25.0
+use_directional_animations = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1600135025]
+position = Vector2(10, -2)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_drlwf")
+animation = &"die"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2005236162]
+shape = SubResource("RectangleShape2D_f88vd")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1746397711]
+scale = Vector2(0.3, 0.3)
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1661788030]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_e1xfi")
+
+[node name="Enemy_Health" parent="." unique_id=26889117 instance=ExtResource("2_nqpm4")]
+max_health = 7
+
+[node name="HitFlash" parent="." unique_id=1405195646 instance=ExtResource("3_n1ng7")]
+
+[node name="HazardDetector" parent="." unique_id=1743736976 instance=ExtResource("4_6u6vj")]
+scale = Vector2(0.4, 0.4)
