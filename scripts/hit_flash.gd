@@ -1,8 +1,5 @@
 extends Node
 
-## Attach this as a child of any enemy, and call flash() on hit.
-## Assumes the enemy's visual node (passed in) has a ShaderMaterial using hit_flash.gdshader.
-
 @export var flash_color: Color = Color("#00c8df")
 @export var flash_peak := 0.6      # how strong the flash gets (0-1)
 @export var flash_in_time := 0.05

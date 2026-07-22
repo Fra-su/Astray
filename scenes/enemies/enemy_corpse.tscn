@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://4tkkmdw4fqxx"]
 
-[ext_resource type="Script" uid="uid://cropp2vyru0kk" path="res://enemy_corpse.gd" id="1_r4xhg"]
+[ext_resource type="Script" path="res://enemy_corpse.gd" id="1_r4xhg"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r4xhg"]
 friction = 0.6
-bounce = 0.3
+bounce = 0.5
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i6qrp"]
 radius = 20.0

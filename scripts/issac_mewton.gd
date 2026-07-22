@@ -1,9 +1,5 @@
 extends CharacterBody2D
 
-## Place one instance of this scene in mewton_house.tscn (required_state = AT_HOME) and
-## another in town_room.tscn (required_state = AT_WORK). Whichever instance doesn't match
-## MewtonState.current_state disables itself entirely on _ready() - only one is ever "real"
-## at a time, giving the illusion that Issac himself moved between the two locations.
 @export var required_state: MewtonState.State = MewtonState.State.AT_HOME
 
 # wander area - relative to wherever this instance is placed in the editor, so you can
@@ -47,6 +43,7 @@ func _ready() -> void:
 	if MewtonState.current_state != required_state:
 		# this isn't where Issac currently is - disable entirely, the other instance is the real one
 		visible = false
+		prompt_label.visible = false
 		set_physics_process(false)
 		set_process(false)
 		shop_trigger.monitoring = false

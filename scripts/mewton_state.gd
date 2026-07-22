@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 ## Tracks whether Issac is currently "at home" (mewton_house.tscn, idle) or "at work"
 ## (town_room.tscn, working). The state only ever flips at the exact moment the player

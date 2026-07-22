@@ -20,10 +20,10 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
 
+MewtonState="*uid://yloveav8y0bq"
 GameState="*uid://cjmbqugiarifu"
 Transition="*uid://dnj4krdcvdk22"
 SettingsSignalBus="*uid://broexvuxbkxbr"
-MewtonState="*uid://yloveav8y0bq"
 
 [display]
 

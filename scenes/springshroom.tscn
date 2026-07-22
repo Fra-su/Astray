@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dntsbnr0ip1w1"]
+[gd_scene load_steps=0 format=3 uid="uid://dntsbnr0ip1w1"]
 
 [ext_resource type="Texture2D" uid="uid://c3g33gplhp5lm" path="res://assets/images/spritesheets/other/Springshroom.png" id="1_q2p2h"]
 [ext_resource type="Script" uid="uid://bwk0anl5hl55f" path="res://scripts/springshroom.gd" id="2_j6kje"]
